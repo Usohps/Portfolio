@@ -13,9 +13,9 @@ function SideMenu({ handleShowMenu, showMenu }) {
           <AiOutlineClose size={32} />
         </button>
       </div>
-      <div className="flex flex-col justify-center items-center m-auto w-[80%] shadow-lg h-[400px]">
+      <div className="flex flex-col justify-center items-center m-auto w-[80%] shadow-lg h-[400px] font-bold">
         <form className="w-full h-full flex justify-center items-center flex-col text-2xl space-y-4 rounded-lg">
-          <div className="border">
+          <div className="font-extrabold">
             <h1>
                 Let's Get Started
             </h1>

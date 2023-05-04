@@ -3,6 +3,7 @@ import {} from "react-icons/";
 import Photo from "../assets/photo.jpeg";
 import { BsFacebook, BsLinkedin, BsTwitter,BsGithub } from "react-icons/bs";
 import {SiGmail} from "react-icons/si"
+import myResume from "../assets/my Resume.pdf"
 function About() {
   return (
     <>
@@ -36,8 +37,8 @@ function About() {
                 </a>
               </div>
             <div className="container my-4 flex justify-between p-4 shadow-2xl rounded  ">
-              <button className="shadow-2xl font-bold text-transparent text-xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">HIRE ME</button>
-              <button className="shadow-2xl font-bold text-transparent text-xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">GET RESUME</button>
+              <button className="shadow-2xl font-bold text-transparent text-xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600"><a href="mailto:usohps@gmail.com">HIRE ME</a></button>
+              <button className="shadow-2xl font-bold text-transparent text-xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600"> <a href={myResume} download={myResume}>GET RESUME</a></button>
             </div>
           </div>
           <div className=" w-full md:w-[600px] text-center md:p-2 p-3">

@@ -1,6 +1,8 @@
 import React from "react";
 import Screenshot from "../assets/signupblogshot1.png";
 import Screenshot2 from "../assets/workoushot@1.png";
+import Screenshot3 from "../assets/countryapi.png";
+import Screenshot4 from "../assets/flutterScreenshot.png";
 function Projects() {
   return (
     <div className="container m-auto ">
@@ -41,8 +43,9 @@ function Projects() {
               and fitness coaches to keep records of weight,reps,and load and as
               well be able to track their fitness progress with ease. It gives
               the propective usser ability to search fro workouts and delete
-              workout records if not intended to be recorded.A MERN application, designed with
-              TailwindCSS. Endpoints deployed on cyclic, frontend deployed on vercel.
+              workout records if not intended to be recorded.A MERN application,
+              designed with TailwindCSS. Endpoints deployed on cyclic, frontend
+              deployed on vercel.
             </p>
             <a href="https://client-workout.vercel.app/">
               <button className="bg-clip-text font-semibold text-transparent bg-gradient-to-r from-purple-400 to-pink-600 my-4 py-2 shadow-lg outline-none rounded">
@@ -53,15 +56,15 @@ function Projects() {
         </div>
         <div className="py-3 md:py-0 md:pb-3 border-y-2 md:border-2 w-[350px] h-[550px] border-gray-500 shadow-2xl md:rounded">
           <div className=" w-full rounded">
-            <img src={Screenshot2} className="" alt="" />
+            <img src={Screenshot3} className="" alt="" />
           </div>
           <div className=" w-full p-4">
-          <h1 className="font-bold text-xl py-2">COUNTRY API</h1>
+            <h1 className="font-bold text-xl py-2">COUNTRY API</h1>
             <p className="text-gray-400 font-medium">
-               Lorem ipsum dolor sit, amet consectetur adipisicing
-              elit. Cum ea eius ducimus architecto veritatis earum dignissimos
-              minus facilis rerum sit illo laborum eligendi animi molestiae ut,
-              vitae, minima officia itaque.
+              This project is meant to test my ability with API's consumption,
+              also the implementation of a search feature, that aids a potential
+              user to search for a country with ease without scrolling through the
+              application.
             </p>
             <a href="https://country-api-frontend-mentor.vercel.app/">
               <button className="bg-clip-text font-semibold text-transparent bg-gradient-to-r from-purple-400 to-pink-600 my-4 p-2 shadow-lg outline-none rounded">
@@ -72,15 +75,13 @@ function Projects() {
         </div>
         <div className="py-3 md:py-0 md:pb-3 border-y-2 md:border-2 w-[350px] h-[550px] border-gray-500 shadow-2xl md:rounded">
           <div className="w-full ">
-            <img src={Screenshot} className="" alt="" />
+            <img src={Screenshot4} className="" alt="" />
           </div>
           <div className=" w-full p-4">
-          <h1 className="font-bold text-xl py-2">FLUTTERWAVE CLONE</h1>
+            <h1 className="font-bold text-xl py-2">FLUTTERWAVE CLONE</h1>
             <p className="text-gray-400 font-medium">
-              Lorem ipsum dolor sit, amet consectetur
-              adipisicing elit. Cum ea eius ducimus architecto veritatis earum
-              dignissimos minus facilis rerum sit illo laborum eligendi animi
-              molestiae ut, vitae, minima officia itaque.
+             This is a clone Landingpage, I cloned this landing page to test my layouting skills and also replicating ability,
+             I achieved the landing page with HTML CSS and JAVASCRIPT. The nav component on mobile was a bit tasking I enjoyed recreating this site.
             </p>
             <a href="https://flutterwave-clone-olive.vercel.app/">
               <button className="bg-clip-text font-semibold text-transparent bg-gradient-to-r from-purple-400 to-pink-600 my-4 p-2 shadow-lg outline-none rounded">
