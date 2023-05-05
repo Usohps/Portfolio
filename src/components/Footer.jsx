@@ -11,9 +11,9 @@ function Footer() {
         <a href="https://www.linkedin.com/in/princewill-usoh-526912211/" className="bg-white hover:bg-gradient-to-r from-sky-500 to-indigo-500 ease-in-out duration-700 rounded">
           <BsLinkedin size={24} />
         </a>
-        <a href="https://twitter.com/PrincewillUsoh" className="bg-white hover:bg-gradient-to-r from-sky-500 to-indigo-500 ease-in-out duration-700 rounded">
+        {/* <a href="https://twitter.com/PrincewillUsoh" className="bg-white hover:bg-gradient-to-r from-sky-500 to-indigo-500 ease-in-out duration-700 rounded">
           <BsTwitter size={24} />
-        </a>
+        </a> */}
         <a
           href="https://github.com/Usohps"
           className="bg-white hover:bg-gradient-to-r from-sky-500 to-indigo-500 ease-in-out duration-700 rounded"
