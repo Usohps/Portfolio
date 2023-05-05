@@ -2,7 +2,7 @@ import React from "react";
 // import axios from "axios";
 // import { useState } from "react";
 import { BsArrowRight } from "react-icons/bs";
-import Screenshot from "../assets/dreadphoto.jpeg";
+import Screenshot from "../assets/cozy.JPG";
 function Home() {
   // const [quotes, setQuotes] = useState([]);
   // const rollout_txt = async () => {
