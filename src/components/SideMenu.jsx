@@ -5,7 +5,7 @@ function SideMenu({ handleShowMenu, showMenu }) {
   return (
     <div>
       <div
-        className={`w-full h-full fixed top-[0] backdrop-blur-2xl animation z-50 left-0 from-transparent to-[#253D62]  ${
+        className={`w-full h-full md:hidden fixed top-[0] backdrop-blur-2xl animation z-50 left-0 from-transparent to-[#253D62]  ${
           showMenu ? "" : "hidden"
         } `}
       >

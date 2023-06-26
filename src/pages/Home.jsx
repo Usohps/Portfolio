@@ -1,36 +1,39 @@
-import React from "react";
-// import axios from "axios";
-// import { useState } from "react";
+import React, { useState } from "react";
 import { BsArrowRight } from "react-icons/bs";
 import Screenshot from "../assets/cozy.JPG";
+import { Audio } from "react-loader-spinner";
 function Home() {
-  // const [quotes, setQuotes] = useState([]);
-  // const rollout_txt = async () => {
-  //   await axios
-  //     .get("https://backend-omega-seven.vercel.app/api/getjoke")
-  //     .then((res) => setQuotes(res.data));
-  // };
-  // console.log(quotes)
-  // setInterval(quotes + 1,[5000])
+  const [isLoading, setIsLoading] = useState(true);
+  // if (isLoading) {
+  //   return (
+  //     <div className="w-full md:min-h-screen h-full flex items-center justify-center">
+  //       <Audio
+  //         height="40"
+  //         width="80"
+  //         radius="9"
+  //         color="white"
+  //         ariaLabel="loading"
+  //         wrapperStyle
+  //         wrapperClass
+  //       />
+  //     </div>
+  //   )
+  // }
   return (
     <>
-      <h1 className="hidden md:block pt-32 container m-auto text-center text-6xl">Thanks For Your Time </h1>
+      <h1 className="hidden md:block pt-32 container m-auto text-center text-6xl">
+        Thanks For Your Time{" "}
+      </h1>
       <div className="container m-auto p-6 mt-12 flex flex-col md:flex-row justify-between items-center">
         <div className="hover:blur-sm">
           <div className="w-[200px] rounded-full md:w-[300px] border-4 md:rounded mb-4 md:mb-0">
-            <img src={Screenshot} alt="" className="w-full rounded-full md:rounded" />
+            <img
+              src={Screenshot}
+              alt=""
+              className="w-full rounded-full md:rounded"
+            />
           </div>
         </div>
-        {/* <div>
-        {quotes &&
-          quotes.map((quote) => (
-            <div className="w-full container ">
-              <h1>{quote.question[0]}</h1>
-              <p>{quote.punchline[0]}</p>
-            </div>
-          ))}
-        <button onClick={rollout_txt}>clicl me</button>
-      </div> */}
         <div className="space-y-4 w-[350px]">
           <div className="container m-auto text-center bg-gradient-to-r from-purple-400 to-pink-600 p-2 rounded shadow-2xl">
             <a
