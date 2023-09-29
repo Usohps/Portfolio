@@ -1,7 +1,6 @@
-import React from "react";
 import {} from "react-icons/";
 import Photo from "../assets/photo.jpeg";
-import { BsFacebook, BsLinkedin, BsTwitter,BsGithub } from "react-icons/bs";
+import { BsFacebook, BsLinkedin,BsGithub } from "react-icons/bs";
 import {SiGmail} from "react-icons/si"
 import myResume from "../assets/my Resume.pdf"
 function About() {

@@ -1,24 +1,6 @@
-import React, { useState } from "react";
 import { BsArrowRight } from "react-icons/bs";
 import Screenshot from "../assets/cozy.JPG";
-import { Audio } from "react-loader-spinner";
 function Home() {
-  const [isLoading, setIsLoading] = useState(true);
-  // if (isLoading) {
-  //   return (
-  //     <div className="w-full md:min-h-screen h-full flex items-center justify-center">
-  //       <Audio
-  //         height="40"
-  //         width="80"
-  //         radius="9"
-  //         color="white"
-  //         ariaLabel="loading"
-  //         wrapperStyle
-  //         wrapperClass
-  //       />
-  //     </div>
-  //   )
-  // }
   return (
     <>
       <h1 className="hidden md:block pt-32 container m-auto text-center text-6xl">
@@ -85,7 +67,6 @@ function Home() {
               target="_blank"
             >
               <h1 className="font-bold ">
-                {" "}
                 Article On The Benefits of Responsive Design to Companies Growth
               </h1>
             </a>
