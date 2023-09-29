@@ -8,12 +8,12 @@ function App() {
   return (
     <>
     <BrowserRouter>
-      <div className='bg-[#111827] w-full '>
+      <div className='bg-[#111827]'>
      <PageHeader/>
      <Routes>
      <Route path='/'element={<Home/>}/>
-      <Route path='/about'element={<About/>}/>
-      <Route path='/projects'element={<Projects/>}/>
+      <Route path='/pages/about'element={<About/>}/>
+      <Route path='/pages/projects'element={<Projects/>}/>
      </Routes>
      <Footer/>
       </div>
