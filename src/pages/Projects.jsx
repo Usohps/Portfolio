@@ -3,6 +3,7 @@ import Screenshot2 from "../assets/workoushot@1.png";
 import Screenshot3 from "../assets/provisdashboard.png";
 import Screenshot5 from "../assets/flutterScreenshot.png";
 import Screenshot4 from "../assets/getLinked.png";
+import { Link } from "react-router-dom";
 function Projects() {
   return (
     // <></>
@@ -26,11 +27,11 @@ function Projects() {
               TailwindCSS, and cloudinary to enable users post image. Endpoints
               deployed on cyclic, frontend deployed on vercel.
             </p>
-            <a href="https://client-blog-theta.vercel.app/">
+            <Link to="https://client-blog-theta.vercel.app/">
               <button className="bg-clip-text font-semibold text-transparent bg-gradient-to-r from-purple-400 to-pink-600 my-4 p-2 shadow-lg outline-none rounded">
                 View Project
               </button>
-            </a>
+            </Link>
           </div>
         </div>
         <div className=" py-3 md:py-0 md:pb-3 border-y-2 md:border-2 w-[350px] h-[550px] border-gray-500 shadow-2xl md:rounded">
@@ -48,11 +49,11 @@ function Projects() {
               designed with TailwindCSS. Endpoints deployed on cyclic, frontend
               deployed on vercel.
             </p>
-            <a href="https://client-workout.vercel.app/">
+            <Link to="https://client-workout.vercel.app/">
               <button className="bg-clip-text font-semibold text-transparent bg-gradient-to-r from-purple-400 to-pink-600 my-4 py-2 shadow-lg outline-none rounded">
                 View Project
               </button>
-            </a>
+            </Link>
           </div>
         </div>
         <div className="py-3 md:py-0 md:pb-3 border-y-2 md:border-2 w-[350px] h-[550px] border-gray-500 shadow-2xl md:rounded">
@@ -67,11 +68,11 @@ function Projects() {
               user to search for a country with ease without scrolling through the
               application.
             </p>
-            <a href="https://nextjs-dashboard-orcin.vercel.app/">
+            <Link to="https://nextjs-dashboard-orcin.vercel.app/">
               <button className="bg-clip-text font-semibold text-transparent bg-gradient-to-r from-purple-400 to-pink-600 my-4 p-2 shadow-lg outline-none rounded">
                 View Project
               </button>
-            </a>
+            </Link>
           </div>
         </div>
         <div className="py-3 md:py-0 md:pb-3 border-y-2 md:border-2 w-[350px] h-[550px] border-gray-500 shadow-2xl md:rounded">
@@ -84,11 +85,11 @@ function Projects() {
              This is a clone Landingpage, I cloned this landing page to test my layouting skills and also replicating ability,
              I achieved the landing page with HTML CSS and JAVASCRIPT. The nav component on mobile was a bit tasking I enjoyed recreating this site.
             </p>
-            <a href="https://flutterwave-clone-olive.vercel.app/">
+            <Link to="https://flutterwave-clone-olive.vercel.app/">
               <button className="bg-clip-text font-semibold text-transparent bg-gradient-to-r from-purple-400 to-pink-600 my-4 p-2 shadow-lg outline-none rounded">
                 View Project
               </button>
-            </a>
+            </Link>
           </div>
         </div>
         <div className="py-3 md:py-0 md:pb-3 border-y-2 md:border-2 w-[350px] h-[550px] border-gray-500 shadow-2xl md:rounded">
@@ -101,11 +102,11 @@ function Projects() {
              This is a clone Landingpage, I cloned this landing page to test my layouting skills and also replicating ability,
              I achieved the landing page with HTML CSS and JAVASCRIPT. The nav component on mobile was a bit tasking I enjoyed recreating this site.
             </p>
-            <a href="https://flutterwave-clone-olive.vercel.app/">
+            <Link to="https://flutterwave-clone-olive.vercel.app/">
               <button className="bg-clip-text font-semibold text-transparent bg-gradient-to-r from-purple-400 to-pink-600 my-4 p-2 shadow-lg outline-none rounded">
                 View Project
               </button>
-            </a>
+            </Link>
           </div>
         </div>
         <div className="py-3 md:py-0 md:pb-3 border-y-2 md:border-2 w-[350px] h-[550px] border-gray-500 shadow-2xl md:rounded">
@@ -118,11 +119,11 @@ function Projects() {
              This is a clone Landingpage, I cloned this landing page to test my layouting skills and also replicating ability,
              I achieved the landing page with HTML CSS and JAVASCRIPT. The nav component on mobile was a bit tasking I enjoyed recreating this site.
             </p>
-            <a href="https://flutterwave-clone-olive.vercel.app/">
+            <Link to="https://flutterwave-clone-olive.vercel.app/">
               <button className="bg-clip-text font-semibold text-transparent bg-gradient-to-r from-purple-400 to-pink-600 my-4 p-2 shadow-lg outline-none rounded">
                 View Project
               </button>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

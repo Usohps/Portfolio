@@ -1,4 +1,3 @@
-import {} from "react-icons/";
 import Photo from "../assets/photo.jpeg";
 import { BsFacebook, BsLinkedin,BsGithub } from "react-icons/bs";
 import {SiGmail} from "react-icons/si"

@@ -1,5 +1,4 @@
-import React from "react";
-import { BsFacebook, BsLinkedin, BsTwitter, BsGithub } from "react-icons/bs";
+import { BsFacebook, BsLinkedin, BsGithub } from "react-icons/bs";
 import {SiGmail} from "react-icons/si"
 function Footer() {
   return (
