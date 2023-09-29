@@ -34,19 +34,19 @@ function PageHeader() {
             <div className=" flex w-[300px] flex-col ease-in-out  justify-center items-center rounded-xl m-auto  shadow-2xl shadow-slate-900 bg-gradient-to-r from-blue-950 to-purple-900  font-bold">
               <ul className=" w-full  md:max-w-[300px] text-white h-[150px] flex flex-col justify-center items-center text-sm space-y-4">
                 <li>
-                  <a href={"/"} onClick={() => setNavbar(!navbar)}>
+                  <Link href={"/"} onClick={() => setNavbar(!navbar)}>
                     Home
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href={"/projects"} onClick={() => setNavbar(!navbar)}>
+                  <Link href={"/projects"} onClick={() => setNavbar(!navbar)}>
                     Project
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href={"/about"} onClick={() => setNavbar(!navbar)}>
+                  <Link href={"/about"} onClick={() => setNavbar(!navbar)}>
                     About
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
