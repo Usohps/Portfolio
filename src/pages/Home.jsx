@@ -3,8 +3,8 @@ import Screenshot from "../assets/cozy.JPG";
 import { Link } from "react-router-dom";
 function Home() {
   return (
-    <>
-      <h1 className="hidden md:block pt-32 container m-auto text-center text-6xl">
+    <div className="py-20">
+      <h1 className="hidden md:block p-20 container m-auto text-center text-6xl">
         Thanks For Your Time{" "}
       </h1>
       <div className="container m-auto p-6 mt-12 flex flex-col md:flex-row justify-between items-center">
@@ -80,7 +80,7 @@ function Home() {
           </a>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

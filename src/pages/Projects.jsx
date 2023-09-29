@@ -1,13 +1,13 @@
 import Screenshot from "../assets/signupblogshot1.png";
 import Screenshot2 from "../assets/workoushot@1.png";
-import Screenshot3 from "../assets/countryapi.png";
+import Screenshot3 from "../assets/provisdashboard.png";
 import Screenshot5 from "../assets/flutterScreenshot.png";
 import Screenshot4 from "../assets/getLinked.png";
 function Projects() {
   return (
     // <></>
     <div className="container m-auto ">
-      <div className="container py-12 border-b-2 border-gray-50 my-12">
+      <div className="container py-12 pt-20 border-b-2 border-gray-50 my-12">
         <h1 className="md:text-6xl text-5xl text-blue-500">Projects</h1>
       </div>
       <div className="flex md:flex-row items-center justify-center flex-col md:flex-wrap gap-2">
@@ -60,14 +60,14 @@ function Projects() {
             <img src={Screenshot3} className="" alt="" />
           </div>
           <div className=" w-full p-4">
-            <h1 className="font-bold text-xl py-2">COUNTRY API</h1>
+            <h1 className="font-bold text-xl py-2">NEXTJS DASHBOARD </h1>
             <p className="text-gray-400 font-medium">
               This project is meant to test my ability with API s consumption,
               also the implementation of a search feature, that aids a potential
               user to search for a country with ease without scrolling through the
               application.
             </p>
-            <a href="https://country-api-frontend-mentor.vercel.app/">
+            <a href="https://nextjs-dashboard-orcin.vercel.app/">
               <button className="bg-clip-text font-semibold text-transparent bg-gradient-to-r from-purple-400 to-pink-600 my-4 p-2 shadow-lg outline-none rounded">
                 View Project
               </button>
