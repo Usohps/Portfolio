@@ -11,8 +11,8 @@ function PageHeader() {
       </div>
       <div className="md:flex gap-3 items-center px-8 text-white font-bold justify-center hidden">
       <Link to={"/"}>Home</Link>
-      <Link to={"/projects"}>Projects</Link>
-      <Link to={"/about"}>About</Link>
+      <Link to={"/pages/projects"}>Projects</Link>
+      <Link to={"/pages/about"}>About</Link>
       </div>
       <div className="md:hidden z-40">
           <button onClick={() => setNavbar(!navbar)}>
