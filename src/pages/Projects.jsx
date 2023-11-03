@@ -3,6 +3,8 @@ import Screenshot2 from "../assets/workoushot@1.png";
 import Screenshot3 from "../assets/provisdashboard.png";
 import Screenshot5 from "../assets/flutterScreenshot.png";
 import Screenshot4 from "../assets/getLinked.png";
+import Screenshot6 from "../assets/cozybookShot.png";
+import Screenshot7 from "../assets/e-commerceshot.png";
 import { Link } from "react-router-dom";
 function Projects() {
   return (
@@ -12,6 +14,69 @@ function Projects() {
         <h1 className="md:text-6xl text-5xl text-blue-500">Projects</h1>
       </div>
       <div className="flex md:flex-row items-center justify-center flex-col md:flex-wrap gap-2">
+      <div className="py-3 md:py-0 md:pb-3 border-y-2 md:border-2 w-[350px] h-[550px] border-gray-500 shadow-2xl md:rounded">
+          <div className="w-full ">
+            <img src={Screenshot6} className="" alt="" />
+          </div>
+          <div className=" w-full p-4">
+            <h1 className="font-bold text-xl py-2">COZY_BOOKSHOP</h1>
+            <p className="text-gray-400 font-medium">
+              I created a user-friendly bookshop app, seamlessly blending a vast
+              book catalog with intuitive navigation and secure purchases. The
+              app enhances the reading experience, offering book
+              recommendations, personalized user profiles, and a smooth checkout
+              process. It showcases my mobile app development skills and passion
+              for literature.
+            </p>
+            <Link to="https://cozy-bookshop.vercel.app/">
+              <button className="bg-clip-text font-semibold text-transparent bg-gradient-to-r from-purple-400 to-pink-600 my-4 p-2 shadow-lg outline-none rounded">
+                View Project
+              </button>
+            </Link>
+          </div>
+        </div>
+        <div className="py-3 md:py-0 md:pb-3 border-y-2 md:border-2 w-[350px] h-[550px] border-gray-500 shadow-2xl md:rounded">
+          <div className="w-full ">
+            <img src={Screenshot7} className="" alt="" />
+          </div>
+          <div className=" w-full p-4">
+            <h1 className="font-bold text-xl py-2">COZY_COMMERCE SITE</h1>
+            <p className="text-gray-400 font-medium">
+              "I designed and developed a user-friendly e-commerce mobile app
+              with a sleek, intuitive interface, seamless payment integration,
+              and robust product catalog. The app showcases my skills in
+              creating a convenient online shopping experience, promoting sales,
+              and ensuring secure transactions, making it a valuable addition to
+              my portfolio."
+            </p>
+            <Link to="https://e-commerce-site-usohps.vercel.app/">
+              <button className="bg-clip-text font-semibold text-transparent bg-gradient-to-r from-purple-400 to-pink-600 my-4 p-2 shadow-lg outline-none rounded">
+                View Project
+              </button>
+            </Link>
+          </div>
+        </div>
+        <div className="py-3 md:py-0 md:pb-3 border-y-2 md:border-2 w-[350px] h-[550px] border-gray-500 shadow-2xl md:rounded">
+          <div className=" w-full rounded">
+            <img src={Screenshot3} className="" alt="" />
+          </div>
+          <div className=" w-full p-4">
+            <h1 className="font-bold text-xl py-2">NEXTJS DASHBOARD </h1>
+            <p className="text-gray-400 font-medium">
+              In this Application, I showcased a meticulously designed dashboard
+              app, It offers an intuitive user interface with insightful data
+              visualization,supposed to provide real-time analytics and
+              efficient data management. The app's sleek design, functionality,
+              and user-friendliness demonstrate my expertise in web development
+              and UI/UX design interpretation in code.
+            </p>
+            <Link to="https://nextjs-dashboard-orcin.vercel.app/">
+              <button className="bg-clip-text font-semibold text-transparent bg-gradient-to-r from-purple-400 to-pink-600 my-4 p-2 shadow-lg outline-none rounded">
+                View Project
+              </button>
+            </Link>
+          </div>
+        </div>
         <div className=" w-[350px] h-[550px] border-y-2  md:border-2 border-gray-500 shadow-2xl md:rounded py-3 md:py-0 md:pb-3">
           <div className="w-full  rounded">
             <img src={Screenshot} className="h-[150px] w-full" alt="" />
@@ -57,67 +122,16 @@ function Projects() {
           </div>
         </div>
         <div className="py-3 md:py-0 md:pb-3 border-y-2 md:border-2 w-[350px] h-[550px] border-gray-500 shadow-2xl md:rounded">
-          <div className=" w-full rounded">
-            <img src={Screenshot3} className="" alt="" />
-          </div>
-          <div className=" w-full p-4">
-            <h1 className="font-bold text-xl py-2">NEXTJS DASHBOARD </h1>
-            <p className="text-gray-400 font-medium">
-              This project is meant to test my ability with API s consumption,
-              also the implementation of a search feature, that aids a potential
-              user to search for a country with ease without scrolling through the
-              application.
-            </p>
-            <Link to="https://nextjs-dashboard-orcin.vercel.app/">
-              <button className="bg-clip-text font-semibold text-transparent bg-gradient-to-r from-purple-400 to-pink-600 my-4 p-2 shadow-lg outline-none rounded">
-                View Project
-              </button>
-            </Link>
-          </div>
-        </div>
-        <div className="py-3 md:py-0 md:pb-3 border-y-2 md:border-2 w-[350px] h-[550px] border-gray-500 shadow-2xl md:rounded">
           <div className="w-full ">
             <img src={Screenshot4} className="" alt="" />
           </div>
           <div className=" w-full p-4">
             <h1 className="font-bold text-xl py-2">FLUTTERWAVE CLONE</h1>
             <p className="text-gray-400 font-medium">
-             This is a clone Landingpage, I cloned this landing page to test my layouting skills and also replicating ability,
-             I achieved the landing page with HTML CSS and JAVASCRIPT. The nav component on mobile was a bit tasking I enjoyed recreating this site.
-            </p>
-            <Link to="https://flutterwave-clone-olive.vercel.app/">
-              <button className="bg-clip-text font-semibold text-transparent bg-gradient-to-r from-purple-400 to-pink-600 my-4 p-2 shadow-lg outline-none rounded">
-                View Project
-              </button>
-            </Link>
-          </div>
-        </div>
-        <div className="py-3 md:py-0 md:pb-3 border-y-2 md:border-2 w-[350px] h-[550px] border-gray-500 shadow-2xl md:rounded">
-          <div className="w-full ">
-            <img src={Screenshot5} className="" alt="" />
-          </div>
-          <div className=" w-full p-4">
-            <h1 className="font-bold text-xl py-2">FLUTTERWAVE CLONE</h1>
-            <p className="text-gray-400 font-medium">
-             This is a clone Landingpage, I cloned this landing page to test my layouting skills and also replicating ability,
-             I achieved the landing page with HTML CSS and JAVASCRIPT. The nav component on mobile was a bit tasking I enjoyed recreating this site.
-            </p>
-            <Link to="https://flutterwave-clone-olive.vercel.app/">
-              <button className="bg-clip-text font-semibold text-transparent bg-gradient-to-r from-purple-400 to-pink-600 my-4 p-2 shadow-lg outline-none rounded">
-                View Project
-              </button>
-            </Link>
-          </div>
-        </div>
-        <div className="py-3 md:py-0 md:pb-3 border-y-2 md:border-2 w-[350px] h-[550px] border-gray-500 shadow-2xl md:rounded">
-          <div className="w-full ">
-            <img src={Screenshot4} className="" alt="" />
-          </div>
-          <div className=" w-full p-4">
-            <h1 className="font-bold text-xl py-2">FLUTTERWAVE CLONE</h1>
-            <p className="text-gray-400 font-medium">
-             This is a clone Landingpage, I cloned this landing page to test my layouting skills and also replicating ability,
-             I achieved the landing page with HTML CSS and JAVASCRIPT. The nav component on mobile was a bit tasking I enjoyed recreating this site.
+              This is a clone Landingpage, I cloned this landing page to test my
+              layouting skills and also replicating ability, I achieved the
+              landing page with HTML CSS and JAVASCRIPT. The nav component on
+              mobile was a bit tasking I enjoyed recreating this site.
             </p>
             <Link to="https://flutterwave-clone-olive.vercel.app/">
               <button className="bg-clip-text font-semibold text-transparent bg-gradient-to-r from-purple-400 to-pink-600 my-4 p-2 shadow-lg outline-none rounded">
