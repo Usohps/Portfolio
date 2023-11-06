@@ -31,12 +31,11 @@ function Home() {
           </div>
           <div className="container m-auto text-center bg-gradient-to-r from-purple-400 to-pink-600 p-2 rounded shadow-2xl">
             <Link
-              href="https://medium.com/@usohps/the-importance-of-proper-file-structure-in-programming-421de3af2794"
+              href="https://medium.com/@usohps/developing-a-programmers-mindset-how-to-think-like-a-programmer-d8a3befc56ef"
               target="_blank"
             >
               <h1 className="font-bold ">
-                Article On The Importance of Proper file Structure in
-                Development
+                Article On Developing A Programmer's Mindset
               </h1>
             </Link>
           </div>
