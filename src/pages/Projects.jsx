@@ -6,10 +6,20 @@ import Screenshot4 from "../assets/getLinked.png";
 import Screenshot6 from "../assets/cozybookShot.png";
 import Screenshot7 from "../assets/e-commerceshot.png";
 import { Link } from "react-router-dom";
+import Loader from "../components/utils/loader"
+import { useState,useEffect } from "react";
 function Projects() {
+  const [isLoading,setIsloading] = useState(true)
+  useEffect(()=>{
+    setTimeout(()=>{
+      setIsloading(!isLoading)
+    },3000)
+  },[])
   return (
-    // <></>
-    <div className="container m-auto ">
+    <>
+
+    {isLoading?<Loader/>:(
+      <div className="container m-auto ">
       <div className="container py-12 pt-20 border-b-2 border-gray-50 my-12">
         <h1 className="md:text-6xl text-5xl text-blue-500">Projects</h1>
       </div>
@@ -142,6 +152,9 @@ function Projects() {
         </div>
       </div>
     </div>
+    )}
+    </>
+    
   );
 }
 

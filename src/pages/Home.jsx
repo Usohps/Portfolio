@@ -1,9 +1,20 @@
 import { BsArrowRight } from "react-icons/bs";
 import Screenshot from "../assets/cozy.JPG";
 import { Link } from "react-router-dom";
+import { useState,useEffect } from "react";
+import Loader from "../components/utils/loader"
 function Home() {
+  const [isLoading, setIsLoading]=useState(true)
+    useEffect(()=>{
+      setTimeout(()=>{
+        setIsLoading(!isLoading)
+      },3000)
+    },[])
   return (
-    <div className="py-20">
+
+    <>
+    {isLoading?(<Loader/>):(
+      <div className="py-20">
       <h1 className="hidden md:block p-20 container m-auto text-center text-6xl">
         Thanks For Your Time{" "}
       </h1>
@@ -80,6 +91,8 @@ function Home() {
         </div>
       </div>
     </div>
+    )}
+    </>
   );
 }
 
