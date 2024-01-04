@@ -77,7 +77,7 @@ function About() {
               </div>
               <div className=" w-full md:w-[600px] text-center md:p-2 p-3">
                 <p className=" font-medium">
-                  Successful Software engineer offering 3 years of experience in
+                  Successful Software engineer offering over 5 years of experience in
                   demanding environments focused on producing cutting - edge
                   systems for the software industry,passionate about building
                   responsive client interface,and improving client interaction

@@ -20,7 +20,7 @@ function Projects() {
 
     {isLoading?<Loader/>:(
       <div className="container m-auto ">
-      <div className="container py-12 pt-20 border-b-2 border-gray-50 my-12">
+      <div className="container py-12 pt-20 px-5 border-b-2 border-gray-50 my-12">
         <h1 className="md:text-6xl text-5xl text-blue-500">Projects</h1>
       </div>
       <div className="flex md:flex-row items-center justify-center flex-col md:flex-wrap gap-2">

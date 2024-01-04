@@ -31,7 +31,7 @@ function Home() {
         <div className="space-y-4 w-[350px]">
           <div className="container m-auto text-center bg-gradient-to-r from-purple-400 to-pink-600 p-2 rounded shadow-2xl">
             <Link
-              href="https://medium.com/@usohps/the-importance-of-proper-file-structure-in-programming-421de3af2794"
+              to="https://medium.com/@usohps/the-importance-of-proper-file-structure-in-programming-421de3af2794"
               target="_blank"
             >
               <h1 className="font-bold ">
@@ -42,7 +42,7 @@ function Home() {
           </div>
           <div className="container m-auto text-center bg-gradient-to-r from-purple-400 to-pink-600 p-2 rounded shadow-2xl">
             <Link
-              href="https://medium.com/@usohps/developing-a-programmers-mindset-how-to-think-like-a-programmer-d8a3befc56ef"
+              to="https://medium.com/@usohps/developing-a-programmers-mindset-how-to-think-like-a-programmer-d8a3befc56ef"
               target="_blank"
             >
               <h1 className="font-bold ">
@@ -52,7 +52,7 @@ function Home() {
           </div>
           <div className="container m-auto text-center bg-gradient-to-r from-purple-400 to-pink-600 p-2 rounded shadow-2xl">
             <Link
-              href="https://medium.com/@usohps/the-importance-of-proper-file-structure-in-programming-421de3af2794"
+              to="https://medium.com/@usohps/the-importance-of-proper-file-structure-in-programming-421de3af2794"
               target="_blank"
             >
               <h1 className="font-bold ">
@@ -63,7 +63,7 @@ function Home() {
           </div>
           <div className="container m-auto text-center bg-gradient-to-r from-purple-400 to-pink-600 p-2 rounded shadow-2xl">
             <Link
-              href="https://medium.com/@usohps/how-to-achieve-a-scalable-and-efficient-website-fb7933508a30"
+              to="https://medium.com/@usohps/how-to-achieve-a-scalable-and-efficient-website-fb7933508a30"
               target="_blank"
             >
               <h1 className="font-bold ">
@@ -74,7 +74,7 @@ function Home() {
           </div>
           <div className="container m-auto text-center  bg-gradient-to-r from-purple-400 to-pink-600 p-2 rounded shadow-2xl">
             <Link
-              href="https://medium.com/@usohps/responsive-design-its-importance-and-contribution-to-company-s-growth-9a9fae992c28"
+              to="https://medium.com/@usohps/responsive-design-its-importance-and-contribution-to-company-s-growth-9a9fae992c28"
               target="_blank"
             >
               <h1 className="font-bold ">
@@ -82,12 +82,12 @@ function Home() {
               </h1>
             </Link>
           </div>
-          <a href="https://medium.com/@usohps">
+          <Link to="https://medium.com/@usohps">
             <button className="rounded p-2 flex items-center justify-center bg-blue-600 my-5">
               Read More
               <BsArrowRight className="mx-2" />
             </button>
-          </a>
+          </Link>
         </div>
       </div>
     </div>
