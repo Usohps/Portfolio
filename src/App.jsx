@@ -1,4 +1,4 @@
-import About from "./pages/About";
+import Blog from "./pages/Blog";
 import PageHeader from "./components/PageHeader";
 import Footer from "./components/Footer";
 import Projects from "./pages/Projects";
@@ -12,7 +12,7 @@ function App() {
           <PageHeader />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/pages/about" element={<About />} />
+            <Route path="/pages/blog" element={<Blog/>} />
             <Route path="/pages/projects" element={<Projects />} />
           </Routes>
           <Footer />

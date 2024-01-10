@@ -6,13 +6,13 @@ function PageHeader() {
   const [navbar,setNavbar] = useState(false)
   return (
     <nav className=" w-full shadow-2xl m-auto flex items-center justify-between p-8 fixed top-0 bg-[#111827] z-10 ">
-      <div className="pl-6">
+      <div className="pl-0">
         <h1 className="text-transparent text-3xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 font-extrabold">COZYDEV~</h1>
       </div>
       <div className="md:flex gap-3 items-center px-8 text-white font-bold justify-center hidden">
       <Link to={"/"}>Home</Link>
       <Link to={"/pages/projects"}>Projects</Link>
-      <Link to={"/pages/about"}>About</Link>
+      <Link to={"/pages/blog"}>Blog</Link>
       </div>
       <div className="md:hidden z-40">
           <button onClick={() => setNavbar(!navbar)}>
@@ -44,8 +44,8 @@ function PageHeader() {
                   </Link>
                 </li>
                 <li>
-                  <Link to={"/pages/about"} onClick={() => setNavbar(!navbar)}>
-                    About
+                  <Link to={"/pages/blog"} onClick={() => setNavbar(!navbar)}>
+                    Blog
                   </Link>
                 </li>
               </ul>

@@ -24,9 +24,9 @@ function Footer() {
                 </a>
       </div>
       <div className="text-white  shadow-md shadow-teal-500 font-bold container m-auto flex md:flex-row flex-col items-center justify-between p-4 px-12">
-        <div>
+        {/* <div>
           <span>Princewill Samuel. 2023 </span>
-        </div>
+        </div> */}
         <div>
           <p>Tailwind Reactjs Theme</p>
         </div>
