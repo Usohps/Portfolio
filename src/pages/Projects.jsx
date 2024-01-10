@@ -43,13 +43,13 @@ function Projects() {
           <div className="container py-12 pt-20 px-5 border-b-2 border-gray-50 my-12">
             <h1 className="md:text-6xl text-5xl text-blue-500">Projects</h1>
           </div>
-          <div className="flex md:flex-row items-center justify-center flex-col md:flex-wrap gap-2">
+          <div className="flex md:flex-row items-center justify-center flex-col md:flex-wrap gap-y-2">
             <div className="py-3 md:py-0 md:pb-3 border-y-2 md:border-2 w-[350px] h-[550px] border-gray-500 shadow-2xl md:rounded">
               <div className="w-full ">
                 <img src={Screenshot8} className="" alt="" />
               </div>
               <div className=" w-full p-4">
-                <h1 className="font-bold text-xl py-2"></h1>
+                <h1 className="font-bold text-xl py-2">FINANCIAL ASSISTANT SITE</h1>
                 <p className="text-gray-400 font-medium">
                   A user-friendly financial app. This application enhances a
                   seamless and convenient way of connecting people's financial

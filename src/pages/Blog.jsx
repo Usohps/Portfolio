@@ -13,14 +13,14 @@ function About() {
 
     <>
     {isLoading?(<Loader/>):(
-      <div className="py-4 border">
+      <div className="py-4">
         <div className="container m-auto py-8 px-5 border-b-2 border-gray-50 my-16">
             <h1 className="md:text-6xl text-5xl text-blue-500">Blogs</h1>
           </div>
       {/* <h1 className="hidden md:block p-20 container m-auto text-center text-6xl">
         Thanks For Your Time{" "}
       </h1> */}
-      <div className="md:w-1/2 border m-auto p-6 mt-0 flex flex-col md:flex-row justify-between items-center">
+      <div className="md:w-1/2 m-auto p-6 mt-0 flex flex-col md:flex-row justify-between items-center">
         <div className="space-y-4 w-[350px] m-auto">
           <div className="container m-auto text-center bg-gradient-to-r from-purple-400 to-pink-600 p-2 rounded shadow-2xl">
             <Link
