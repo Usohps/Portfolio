@@ -36,8 +36,6 @@ function Projects() {
   // ];
   return (
     <>
-      <title>Projects</title>
-      <meta name="description" content="Arrray of projects I have built" />
       {isLoading ? (
         <Loader />
       ) : (
