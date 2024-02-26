@@ -1,6 +1,6 @@
 import Screenshot from "../assets/cozy.JPG";
 // import Photo from "../assets/photo.jpeg";
-import { BsFacebook, BsLinkedin, BsGithub } from "react-icons/bs";
+import { BsLinkedin, BsGithub } from "react-icons/bs";
 import { SiGmail } from "react-icons/si";
 import myResume from "../assets/my Resume.pdf";
 import { useState, useEffect } from "react";

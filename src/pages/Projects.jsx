@@ -18,23 +18,23 @@ function Projects() {
     }, 500);
   }, []);
 
-  const project = [
-    {
-      project_name: "COZY_BOOKSHOP",
-      project_desc:
-        "I created a user-friendly bookshop app, seamlessly blending a vast book catalog with intuitive navigation and secure purchases.Theapp enhances the reading experience, offering bookrecommendations, personalized user profiles, and a smooth checkoutprocess. It showcases my mobile app development skills and passionfor literature.",
-    },
-    {
-      project_name: "COZY_BOOKSHOP",
-      project_desc:
-        "I created a user-friendly bookshop app, seamlessly blending a vast book catalog with intuitive navigation and secure purchases.Theapp enhances the reading experience, offering bookrecommendations, personalized user profiles, and a smooth checkoutprocess. It showcases my mobile app development skills and passionfor literature.",
-    },
-    {
-      project_name: "COZY_BOOKSHOP",
-      project_desc:
-        "I created a user-friendly bookshop app, seamlessly blending a vast book catalog with intuitive navigation and secure purchases.Theapp enhances the reading experience, offering bookrecommendations, personalized user profiles, and a smooth checkoutprocess. It showcases my mobile app development skills and passionfor literature.",
-    },
-  ];
+  // const project = [
+  //   {
+  //     project_name: "COZY_BOOKSHOP",
+  //     project_desc:
+  //       "I created a user-friendly bookshop app, seamlessly blending a vast book catalog with intuitive navigation and secure purchases.Theapp enhances the reading experience, offering bookrecommendations, personalized user profiles, and a smooth checkoutprocess. It showcases my mobile app development skills and passionfor literature.",
+  //   },
+  //   {
+  //     project_name: "COZY_BOOKSHOP",
+  //     project_desc:
+  //       "I created a user-friendly bookshop app, seamlessly blending a vast book catalog with intuitive navigation and secure purchases.Theapp enhances the reading experience, offering bookrecommendations, personalized user profiles, and a smooth checkoutprocess. It showcases my mobile app development skills and passionfor literature.",
+  //   },
+  //   {
+  //     project_name: "COZY_BOOKSHOP",
+  //     project_desc:
+  //       "I created a user-friendly bookshop app, seamlessly blending a vast book catalog with intuitive navigation and secure purchases.Theapp enhances the reading experience, offering bookrecommendations, personalized user profiles, and a smooth checkoutprocess. It showcases my mobile app development skills and passionfor literature.",
+  //   },
+  // ];
   return (
     <>
     <Helmet>
