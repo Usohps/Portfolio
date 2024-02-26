@@ -9,7 +9,6 @@ import Screenshot8 from "../assets/verifica.png";
 import { Link } from "react-router-dom";
 import Loader from "../components/utils/loader";
 import { useState, useEffect } from "react";
-import { Helmet } from "react-helmet-async";
 function Projects() {
   const [isLoading, setIsloading] = useState(true);
   useEffect(() => {
@@ -37,10 +36,8 @@ function Projects() {
   // ];
   return (
     <>
-    <Helmet>
       <title>Projects</title>
       <meta name="description" content="Arrray of projects I have built" />
-    </Helmet>
       {isLoading ? (
         <Loader />
       ) : (
@@ -54,7 +51,9 @@ function Projects() {
                 <img src={Screenshot8} className="" alt="" />
               </div>
               <div className=" w-full p-4">
-                <h1 className="font-bold text-xl py-2">FINANCIAL ASSISTANT SITE</h1>
+                <h1 className="font-bold text-xl py-2">
+                  FINANCIAL ASSISTANT SITE
+                </h1>
                 <p className="text-gray-400 font-medium">
                   A user-friendly financial app. This application enhances a
                   seamless and convenient way of connecting people's financial
@@ -74,10 +73,10 @@ function Projects() {
               <div className=" w-full p-4">
                 <h1 className="font-bold text-xl py-2">CHILDREN NGO SITE</h1>
                 <p className="text-gray-400 font-medium">
-                  A responsive Non-Govermental Organisation site,built to showcase discovered
-                  young potentials and unleash them to the best of their
-                  abilities, helping them become the best version of themselves
-                  and make a positive impact in the world.
+                  A responsive Non-Govermental Organisation site,built to
+                  showcase discovered young potentials and unleash them to the
+                  best of their abilities, helping them become the best version
+                  of themselves and make a positive impact in the world.
                 </p>
                 <Link to="http://children-global.org/" target="_blank">
                   <button className="bg-clip-text font-semibold text-transparent bg-gradient-to-r from-purple-400 to-pink-600 my-4 p-2 shadow-lg outline-none rounded">
@@ -121,7 +120,10 @@ function Projects() {
                   promoting sales, and ensuring secure transactions, making it a
                   valuable addition to my portfolio."
                 </p>
-                <Link to="https://e-commerce-site-usohps.vercel.app/" target="_blank">
+                <Link
+                  to="https://e-commerce-site-usohps.vercel.app/"
+                  target="_blank"
+                >
                   <button className="bg-clip-text font-semibold text-transparent bg-gradient-to-r from-purple-400 to-pink-600 my-4 p-2 shadow-lg outline-none rounded">
                     View Project
                   </button>
@@ -143,7 +145,10 @@ function Projects() {
                   expertise in web development and UI/UX design interpretation
                   in code.
                 </p>
-                <Link to="https://nextjs-dashboard-orcin.vercel.app/" target="_blank">
+                <Link
+                  to="https://nextjs-dashboard-orcin.vercel.app/"
+                  target="_blank"
+                >
                   <button className="bg-clip-text font-semibold text-transparent bg-gradient-to-r from-purple-400 to-pink-600 my-4 p-2 shadow-lg outline-none rounded">
                     View Project
                   </button>
@@ -166,7 +171,10 @@ function Projects() {
                   enable users post image. Endpoints deployed on cyclic,
                   frontend deployed on vercel.
                 </p>
-                <Link to="https://client-blog-theta.vercel.app/" target="_blank">
+                <Link
+                  to="https://client-blog-theta.vercel.app/"
+                  target="_blank"
+                >
                   <button className="bg-clip-text font-semibold text-transparent bg-gradient-to-r from-purple-400 to-pink-600 my-4 p-2 shadow-lg outline-none rounded">
                     View Project
                   </button>
@@ -208,7 +216,10 @@ function Projects() {
                   nav component on mobile was a bit tasking I enjoyed recreating
                   this site.
                 </p>
-                <Link to="https://flutterwave-clone-olive.vercel.app/" target="_blank">
+                <Link
+                  to="https://flutterwave-clone-olive.vercel.app/"
+                  target="_blank"
+                >
                   <button className="bg-clip-text font-semibold text-transparent bg-gradient-to-r from-purple-400 to-pink-600 my-4 p-2 shadow-lg outline-none rounded">
                     View Project
                   </button>

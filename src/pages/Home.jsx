@@ -6,7 +6,6 @@ import myResume from "../assets/my Resume.pdf";
 import { useState, useEffect } from "react";
 import Loader from "../components/utils/loader";
 import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
 function Home() {
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
@@ -17,13 +16,6 @@ function Home() {
 
   return (
     <>
-      <Helmet>
-        <title>Home</title>
-        <meta
-          name="description"
-          content="Welcome to my portfolio here you have a brief intoduction about me, and a link to redirect you to my project page."
-        />
-      </Helmet>
       {isLoading ? (
         <Loader />
       ) : (
