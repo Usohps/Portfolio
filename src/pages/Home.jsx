@@ -3,7 +3,7 @@ import Screenshot from "../assets/cozy.JPG";
 import { BsLinkedin, BsGithub } from "react-icons/bs";
 import { SiGmail } from "react-icons/si";
 import myResume from "../assets/my Resume.pdf";
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import Loader from "../components/utils/loader";
 import { Link } from "react-router-dom";
 function Home() {
@@ -22,9 +22,9 @@ function Home() {
         <div className="w-full p-4 ">
           <div className="w-full flex flex-col items-center justify-center h-full ">
             <div className="container m-auto  flex flex-col items-center ">
-              <div className=" w-full mt-8 md:w-[500px] flex flex-col items-center justify-center text-center">
+              <div data-aos="fade-in" className=" w-full mt-8 md:w-[500px] flex flex-col items-center justify-center text-center">
                 <div className="hover:blur-sm mt-24">
-                  <div className="w-[200px] md:w-[200px] md:h-[200px] mb-4 md:mb-0">
+                  <div data-aos="zoom-in" className="w-[200px] md:w-[200px] md:h-[200px] mb-4 md:mb-0">
                     <img
                       src={Screenshot}
                       alt=""
@@ -32,10 +32,12 @@ function Home() {
                     />
                   </div>
                 </div>
+                <div data-aos="zoom-in" >
                 <h1 className="text-3xl font-extrabold"> Princewill Samuel</h1>
                 <span className="italic font-bold text-blue-500">
                   (Software Developer)
                 </span>
+                </div>
                 <div className=" flex items-center justify-center gap-6 p-6  border-red-700 ">
                   <a
                     href="https://www.linkedin.com/in/princewill-usoh-526912211/"
@@ -56,16 +58,17 @@ function Home() {
                     <SiGmail size={24} />
                   </a>
                 </div>
-                <div className=" w-full md:w-[600px] text-center md:p-2 p-3">
+                <div data-aos="fade-left"
+                data-aos-delay="300" className=" w-full md:w-[600px] text-center md:p-2 p-3">
                   <p className=" text-xl md:text-2xl font-medium">
-                    A Successful Software engineer offering over years of
-                    experience in demanding environments focused on producing
+                    A Successful Software engineer offering over 5(five) years
+                    of experience in demanding environments focused on producing
                     cutting-edge systems for the software industry,passionate
                     about building responsive client interface,and improving
                     client interaction on the web.
                   </p>
-                  <Link to={"/pages/projects"}>
-                    <div className="bg-black hover:bg-gradient-to-r from-sky-500 to-indigo-500 ease-in-out duration-700  w-[250px] rounded-lg m-auto p-1.5 md:p-2 mt-3">
+                  <Link  to={"/pages/projects"}>
+                    <div data-aos="fade-left" className="bg-black hover:bg-gradient-to-r from-sky-500 to-indigo-500 ease-in-out duration-700  w-[250px] rounded-lg m-auto p-1.5 md:p-2 my-6">
                       <p>Click Here To View Projects</p>
                     </div>
                   </Link>

@@ -4,7 +4,17 @@ import Footer from "./components/Footer";
 import Projects from "./pages/Projects";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
+import "aos/dist/aos.css";
+import Aos from "aos";
+import { useEffect } from "react";
 function App() {
+  // npm i aos for smooth animations here
+  useEffect(() => {
+    Aos.init({
+      duration: 1000,
+      easing: "ease-in-out",
+    });
+  });
   return (
     <>
       <BrowserRouter>
