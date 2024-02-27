@@ -39,16 +39,16 @@ function Projects() {
       {isLoading ? (
         <Loader />
       ) : (
-        <div className="container m-auto ">
-          <div className="container py-12 pt-20 px-5 border-b-2 border-gray-50 my-12">
+        <div data-aos="fade-in" className="container m-auto ">
+          <div data-aos="zoom-in" className="container py-12 pt-20 px-5 border-b-2 border-gray-50 my-12">
             <h1 className="md:text-6xl text-5xl text-blue-500">Projects</h1>
           </div>
           <div className="flex md:flex-row items-center justify-center flex-col md:flex-wrap gap-y-2 gap-x-2">
             <div className="py-3 md:py-0 md:pb-3 border-y-2 md:border-2 w-[350px] h-[550px] border-gray-500 shadow-2xl md:rounded">
-              <div className="w-full ">
+              <div data-aos="flip-left" className="w-full ">
                 <img src={Screenshot8} className="" alt="" />
               </div>
-              <div className=" w-full p-4">
+              <div data-aos="fade-in" className=" w-full p-4">
                 <h1 className="font-bold text-xl py-2">
                   FINANCIAL ASSISTANT SITE
                 </h1>
@@ -65,10 +65,10 @@ function Projects() {
               </div>
             </div>
             <div className="py-3 md:py-0 md:pb-3 border-y-2 md:border-2 w-[350px] h-[550px] border-gray-500 shadow-2xl md:rounded">
-              <div className="w-full ">
+              <div data-aos="flip-right" className="w-full ">
                 <img src={Screenshot5} className="" alt="" />
               </div>
-              <div className=" w-full p-4">
+              <div data-aos="fade-in" className=" w-full p-4">
                 <h1 className="font-bold text-xl py-2">CHILDREN NGO SITE</h1>
                 <p className="text-gray-400 font-medium">
                   A responsive Non-Govermental Organisation site,built to
@@ -84,10 +84,10 @@ function Projects() {
               </div>
             </div>
             <div className="py-3 md:py-0 md:pb-3 border-y-2 md:border-2 w-[350px] h-[550px] border-gray-500 shadow-2xl md:rounded">
-              <div className="w-full ">
+              <div data-aos="flip-left" className="w-full ">
                 <img src={Screenshot6} className="" alt="" />
               </div>
-              <div className=" w-full p-4">
+              <div data-aos="fade-in" className=" w-full p-4">
                 <h1 className="font-bold text-xl py-2">COZY_BOOKSHOP</h1>
                 <p className="text-gray-400 font-medium">
                   I created a user-friendly bookshop app, seamlessly blending a
@@ -105,10 +105,10 @@ function Projects() {
               </div>
             </div>
             <div className="py-3 md:py-0 md:pb-3 border-y-2 md:border-2 w-[350px] h-[550px] border-gray-500 shadow-2xl md:rounded">
-              <div className="w-full ">
+              <div data-aos="flip-right" className="w-full ">
                 <img src={Screenshot7} className="" alt="" />
               </div>
-              <div className=" w-full p-4">
+              <div data-aos="fade-in" className=" w-full p-4">
                 <h1 className="font-bold text-xl py-2">COZY_COMMERCE SITE</h1>
                 <p className="text-gray-400 font-medium">
                   "I designed and developed a user-friendly e-commerce mobile
@@ -129,10 +129,10 @@ function Projects() {
               </div>
             </div>
             <div className="py-3 md:py-0 md:pb-3 border-y-2 md:border-2 w-[350px] h-[550px] border-gray-500 shadow-2xl md:rounded">
-              <div className=" w-full rounded">
+              <div data-aos="flip-left" className=" w-full rounded">
                 <img src={Screenshot3} className="" alt="" />
               </div>
-              <div className=" w-full p-4">
+              <div data-aos="fade-in" className=" w-full p-4">
                 <h1 className="font-bold text-xl py-2">NEXTJS DASHBOARD </h1>
                 <p className="text-gray-400 font-medium">
                   In this Application, I showcased a meticulously designed
@@ -154,10 +154,10 @@ function Projects() {
               </div>
             </div>
             <div className=" w-[350px] h-[550px] border-y-2  md:border-2 border-gray-500 shadow-2xl md:rounded py-3 md:py-0 md:pb-3">
-              <div className="w-full  rounded">
+              <div data-aos="flip-right" className="w-full  rounded">
                 <img src={Screenshot} className="h-[150px] w-full" alt="" />
               </div>
-              <div className=" w-full  p-4">
+              <div data-aos="fade-in" className=" w-full  p-4">
                 <h1 className="font-bold text-xl py-2">COZY_BLOG</h1>
                 <p className="text-gray-400 font-medium">
                   A fictional online blog application, where you can create a
@@ -180,10 +180,10 @@ function Projects() {
               </div>
             </div>
             <div className=" py-3 md:py-0 md:pb-3 border-y-2 md:border-2 w-[350px] h-[550px] border-gray-500 shadow-2xl md:rounded">
-              <div className="w-full">
+              <div data-aos="flip-left" className="w-full">
                 <img src={Screenshot2} className="" alt="" />
               </div>
-              <div className="w-full px-2">
+              <div data-aos="fade-in" className="w-full px-2">
                 <h1 className="font-bold text-xl py-2">COZY_WORKOUT</h1>
                 <p className="text-gray-400 font-medium">
                   COZY_Workout is a workout demo platform that helps fitness
@@ -202,10 +202,10 @@ function Projects() {
               </div>
             </div>
             <div className="py-3 md:py-0 md:pb-3 border-y-2 md:border-2 w-[350px] h-[550px] border-gray-500 shadow-2xl md:rounded">
-              <div className="w-full ">
+              <div data-aos="flip-right" className="w-full ">
                 <img src={Screenshot4} className="" alt="" />
               </div>
-              <div className=" w-full p-4">
+              <div data-aos="fade-in" className=" w-full p-4">
                 <h1 className="font-bold text-xl py-2">FLUTTERWAVE CLONE</h1>
                 <p className="text-gray-400 font-medium">
                   This is a clone Landingpage, I cloned this landing page to

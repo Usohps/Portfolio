@@ -13,7 +13,7 @@ a h1{
   color: black;
 }
 .loader {
-  width: 50px;
+  width: 60px;
   aspect-ratio: 1;
   display: grid;
   animation: l14 4s infinite;

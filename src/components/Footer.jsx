@@ -2,7 +2,7 @@ import { BsFacebook, BsLinkedin, BsGithub } from "react-icons/bs";
 import {SiGmail} from "react-icons/si"
 function Footer() {
   return (
-    <div>
+    <div data-aos="zoom-in">
       <div className="flex items-center justify-center gap-6 p-6">
         <a href="https://web.facebook.com/princewill.usoh.1/" className="bg-white hover:bg-gradient-to-r from-sky-500 to-indigo-500 ease-in-out duration-700 rounded">
           <BsFacebook size={24} />
