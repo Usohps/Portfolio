@@ -22,11 +22,8 @@ function About() {
             <h1 className="md:text-6xl text-5xl text-blue-500">Blogs</h1>
           </div>
           <div className="md:w-1/2 m-auto p-6 mt-0 flex flex-col md:flex-row justify-between items-center">
-            <div className="space-y-4 w-[350px] m-auto">
+            <div className="space-y-4 md:w-[350px] m-auto">
               <div
-                data-aos="fade-left"
-                data-aos-offset="300"
-                data-aos-easing="ease-in-sine"
                 className="container m-auto text-center bg-gradient-to-r from-purple-400 to-pink-600 p-2 rounded shadow-2xl"
               >
                 <Link
@@ -40,9 +37,6 @@ function About() {
                 </Link>
               </div>
               <div
-                data-aos="fade-right"
-                data-aos-offset="300"
-                data-aos-easing="ease-in-sine"
                 className="container m-auto text-center bg-gradient-to-r from-purple-400 to-pink-600 p-2 rounded shadow-2xl"
               >
                 <Link
@@ -55,9 +49,6 @@ function About() {
                 </Link>
               </div>
               <div
-                data-aos="fade-left"
-                data-aos-offset="300"
-                data-aos-easing="ease-in-sine"
                 className="container m-auto text-center bg-gradient-to-r from-purple-400 to-pink-600 p-2 rounded shadow-2xl"
               >
                 <Link
@@ -71,9 +62,6 @@ function About() {
                 </Link>
               </div>
               <div
-                data-aos="fade-left"
-                data-aos-offset="300"
-                data-aos-easing="ease-in-sine"
                 className="container m-auto text-center bg-gradient-to-r from-purple-400 to-pink-600 p-2 rounded shadow-2xl"
               >
                 <Link
@@ -87,9 +75,7 @@ function About() {
                 </Link>
               </div>
               <div
-                data-aos="fade-right"
-                data-aos-offset="300"
-                data-aos-easing="ease-in-sine"
+               
                 className="container m-auto text-center  bg-gradient-to-r from-purple-400 to-pink-600 p-2 rounded shadow-2xl"
               >
                 <Link

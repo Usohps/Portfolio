@@ -7,7 +7,7 @@ function PageHeader() {
   return (
     <nav data-aos="fade-down" className=" w-full shadow-2xl m-auto flex items-center justify-between p-8 fixed top-0 bg-[#111827] z-10 ">
       <div className="pl-0">
-        <h1 className="text-transparent text-3xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 font-extrabold">COZYDEV~</h1>
+        <h1 className="text-transparent text-xl md:text-3xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 font-extrabold">COZYDEV~</h1>
       </div>
       <div className="md:flex gap-3 items-center px-8 text-white font-bold justify-center hidden">
       <Link to={"/"}>Home</Link>

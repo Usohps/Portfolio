@@ -44,8 +44,8 @@ function Projects() {
             <h1 className="md:text-6xl text-5xl text-blue-500">Projects</h1>
           </div>
           <div className="flex md:flex-row items-center justify-center flex-col md:flex-wrap gap-y-2 gap-x-2">
-            <div className="py-3 md:py-0 md:pb-3 border-y-2 md:border-2 w-[350px] h-[550px] border-gray-500 shadow-2xl md:rounded">
-              <div data-aos="flip-left" className="w-full ">
+            <div className="py-3 md:py-0 md:pb-3 border-y-2 md:border-2 md:w-[350px] min-h-[550px] border-gray-500 shadow-2xl md:rounded">
+              <div data-aos="flip-left" className="w-full p-4 md:p-0 ">
                 <img src={Screenshot8} className="" alt="" />
               </div>
               <div data-aos="fade-in" className=" w-full p-4">
@@ -64,8 +64,8 @@ function Projects() {
                 </Link>
               </div>
             </div>
-            <div className="py-3 md:py-0 md:pb-3 border-y-2 md:border-2 w-[350px] h-[550px] border-gray-500 shadow-2xl md:rounded">
-              <div data-aos="flip-right" className="w-full ">
+            <div className="py-3 md:py-0 md:pb-3 border-y-2 md:border-2 md:w-[350px] min-h-[550px] border-gray-500 shadow-2xl md:rounded">
+              <div data-aos="flip-right" className="w-full p-4 md:p-0 ">
                 <img src={Screenshot5} className="" alt="" />
               </div>
               <div data-aos="fade-in" className=" w-full p-4">
@@ -83,8 +83,8 @@ function Projects() {
                 </Link>
               </div>
             </div>
-            <div className="py-3 md:py-0 md:pb-3 border-y-2 md:border-2 w-[350px] h-[550px] border-gray-500 shadow-2xl md:rounded">
-              <div data-aos="flip-left" className="w-full ">
+            <div className="py-3 md:py-0 md:pb-3 border-y-2 md:border-2 md:w-[350px] min-h-[550px] border-gray-500 shadow-2xl md:rounded">
+              <div data-aos="flip-left" className="w-full p-4 md:p-0 ">
                 <img src={Screenshot6} className="" alt="" />
               </div>
               <div data-aos="fade-in" className=" w-full p-4">
@@ -104,8 +104,8 @@ function Projects() {
                 </Link>
               </div>
             </div>
-            <div className="py-3 md:py-0 md:pb-3 border-y-2 md:border-2 w-[350px] h-[550px] border-gray-500 shadow-2xl md:rounded">
-              <div data-aos="flip-right" className="w-full ">
+            <div className="py-3 md:py-0 md:pb-3 border-y-2 md:border-2 md:w-[350px] min-h-[550px] border-gray-500 shadow-2xl md:rounded">
+              <div data-aos="flip-right" className="w-full p-4 md:p-0 ">
                 <img src={Screenshot7} className="" alt="" />
               </div>
               <div data-aos="fade-in" className=" w-full p-4">
@@ -128,8 +128,8 @@ function Projects() {
                 </Link>
               </div>
             </div>
-            <div className="py-3 md:py-0 md:pb-3 border-y-2 md:border-2 w-[350px] h-[550px] border-gray-500 shadow-2xl md:rounded">
-              <div data-aos="flip-left" className=" w-full rounded">
+            <div className="py-3 md:py-0 md:pb-3 border-y-2 md:border-2 md:w-[350px] min-h-[550px] border-gray-500 shadow-2xl md:rounded">
+              <div data-aos="flip-left" className=" w-full p-4 md:p-0 rounded">
                 <img src={Screenshot3} className="" alt="" />
               </div>
               <div data-aos="fade-in" className=" w-full p-4">
@@ -153,8 +153,8 @@ function Projects() {
                 </Link>
               </div>
             </div>
-            <div className=" w-[350px] h-[550px] border-y-2  md:border-2 border-gray-500 shadow-2xl md:rounded py-3 md:py-0 md:pb-3">
-              <div data-aos="flip-right" className="w-full  rounded">
+            <div className=" md:w-[350px] min-h-[550px] border-y-2  md:border-2 border-gray-500 shadow-2xl md:rounded py-3 md:py-0 md:pb-3">
+              <div data-aos="flip-right" className="w-full p-4 md:p-0  rounded">
                 <img src={Screenshot} className="h-[150px] w-full" alt="" />
               </div>
               <div data-aos="fade-in" className=" w-full  p-4">
@@ -179,8 +179,8 @@ function Projects() {
                 </Link>
               </div>
             </div>
-            <div className=" py-3 md:py-0 md:pb-3 border-y-2 md:border-2 w-[350px] h-[550px] border-gray-500 shadow-2xl md:rounded">
-              <div data-aos="flip-left" className="w-full">
+            <div className=" py-3 md:py-0 md:pb-3 border-y-2 md:border-2 md:w-[350px] min-h-[550px] border-gray-500 shadow-2xl md:rounded">
+              <div data-aos="flip-left" className="w-full p-4 md:p-0">
                 <img src={Screenshot2} className="" alt="" />
               </div>
               <div data-aos="fade-in" className="w-full px-2">
@@ -201,8 +201,8 @@ function Projects() {
                 </Link>
               </div>
             </div>
-            <div className="py-3 md:py-0 md:pb-3 border-y-2 md:border-2 w-[350px] h-[550px] border-gray-500 shadow-2xl md:rounded">
-              <div data-aos="flip-right" className="w-full ">
+            <div className="py-3 md:py-0 md:pb-3 border-y-2 md:border-2 md:w-[350px] min-h-[550px] border-gray-500 shadow-2xl md:rounded">
+              <div data-aos="flip-right" className="w-full p-4 md:p-0 ">
                 <img src={Screenshot4} className="" alt="" />
               </div>
               <div data-aos="fade-in" className=" w-full p-4">
