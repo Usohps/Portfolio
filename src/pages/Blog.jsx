@@ -52,12 +52,11 @@ function About() {
                 className="container m-auto text-center bg-gradient-to-r from-purple-400 to-pink-600 p-2 rounded shadow-2xl"
               >
                 <Link
-                  to="https://medium.com/@usohps/the-importance-of-proper-file-structure-in-programming-421de3af2794"
+                  to="https://medium.com/@usohps/troubleshooting-routing-challenge-at-production-environment-which-prompts-a-404-error-page-on-37d856b2cf75"
                   target="_blank"
                 >
                   <h1 className="font-bold ">
-                    Article On The Importance of Proper file Structure in
-                    Development
+                    Article On Troubleshooting Routing Challenge with Reactjs Application hosted on Vercel.
                   </h1>
                 </Link>
               </div>
