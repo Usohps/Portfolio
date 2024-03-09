@@ -20,6 +20,7 @@ function Home() {
         <Loader />
       ) : (
         <div className="min-w-full p-4 ">
+          
           <div className="w-full flex flex-col items-cente justify-center h-full ">
             <div className="md:container md:m-auto min-w-full items-center justify-center flex flex-col ">
               <div data-aos="fade-in" className=" w-full mt-8 md:w-[500px] flex flex-col items-center justify-center text-center">
