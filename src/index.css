@@ -35,3 +35,20 @@ a h1{
 @keyframes l14{ 
   100%{transform: rotate(1turn)}
 }
+@layer utilities {
+  .animate-fadeIn {
+    animation: fadeIn 0.4s ease forwards;
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+

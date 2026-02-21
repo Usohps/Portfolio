@@ -18,11 +18,11 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <div className="bg-[#111827]">
+        <div className="bg-[#111827] min-h-screen">
           <PageHeader />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/pages/blog" element={<Blog/>} />
+            <Route path="/pages/blog" element={<Blog />} />
             <Route path="/pages/projects" element={<Projects />} />
           </Routes>
           <Footer />
