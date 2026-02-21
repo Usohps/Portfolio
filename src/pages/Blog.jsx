@@ -68,7 +68,7 @@ function About() {
                     {blog.title}
                   </h2>
 
-                  <div className="mt-6 flex items-center text-blue-600 font-medium">
+                  <div className="mt-6 flex items-center text-blue-500 font-medium">
                     Read Article
                     <BsArrowRight className="ml-2 transition group-hover:translate-x-2" />
                   </div>
@@ -82,7 +82,7 @@ function About() {
                 href="https://medium.com/@usohps"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition"
+                className="inline-flex items-center px-6 py-3 bg-blue-500 text-white rounded-full shadow-lg hover:bg-blue-700 transition"
               >
                 View All Articles
                 <BsArrowRight className="ml-2" />

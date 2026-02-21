@@ -6,7 +6,7 @@ import Screenshot4 from "../assets/getLinked.png";
 import Screenshot6 from "../assets/cozybookShot.png";
 import Screenshot7 from "../assets/myaza.png";
 import Screenshot8 from "../assets/verifica.png";
-
+import Turbomed from "../assets/turbomedics.png";
 export const projects = [
   {
     id: 1,
@@ -26,9 +26,17 @@ export const projects = [
     url: "https://verifrica.com/",
     type: "web",
   },
-
   {
     id: 3,
+    title: "TURBOMEDICS WEBSITE",
+    description:
+      "A responsive website for a medical equipment company built with VueJs and Tailwind CSS.",
+    image: Turbomed,
+    url: "https://turbomedics.com/",
+    type: "web",
+  },
+  {
+    id: 4,
     title: "COZY_BOOKSHOP",
     description:
       "A bookshop mobile application with secure checkout, recommendations, and user profiles.",

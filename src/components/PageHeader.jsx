@@ -15,9 +15,16 @@ function PageHeader() {
         </h1>
       </div>
       <div className="md:flex gap-3 items-center px-8 text-white font-bold justify-center hidden">
-        <Link to={"/"}>Home</Link>
-        <Link to={"/pages/projects"}>Projects</Link>
-        <Link to={"/pages/blog"}>Blog</Link>
+        <Link to={"/"}>
+          {" "}
+          <p>Home</p>
+        </Link>
+        <Link to={"/pages/projects"}>
+          <p>Projects</p>
+        </Link>
+        <Link to={"/pages/blog"}>
+          <p>Blog</p>
+        </Link>
       </div>
       <div data-aos="fade-down" className="md:hidden z-40">
         <button onClick={() => setNavbar(!navbar)}>
@@ -41,17 +48,17 @@ function PageHeader() {
             <ul className=" w-full  md:max-w-[300px] text-white h-[150px] flex flex-col justify-center items-center text-sm space-y-4">
               <li>
                 <Link to={"/"} onClick={() => setNavbar(!navbar)}>
-                  Home
+                  <p>Home</p>
                 </Link>
               </li>
               <li>
                 <Link to={"/pages/projects"} onClick={() => setNavbar(!navbar)}>
-                  Project
+                  <p>Projects</p>
                 </Link>
               </li>
               <li>
                 <Link to={"/pages/blog"} onClick={() => setNavbar(!navbar)}>
-                  Blog
+                  <p>Blog</p>
                 </Link>
               </li>
             </ul>

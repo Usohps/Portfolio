@@ -32,39 +32,9 @@ function Projects() {
           <div className="py-12 pt-20 px-5 border-b-2 border-gray-50 my-12">
             <h1 className="md:text-6xl text-5xl text-blue-500">Projects</h1>
 
-            {/* Standard Toggle */}
-            {/* <div className="mt-6 flex items-center gap-4">
-              <span
-                className={`font-semibold transition ${
-                  !isMobile ? "text-blue-500" : "text-gray-400"
-                }`}
-              >
-                Web
-              </span>
-
-              <label className="relative inline-flex items-center cursor-pointer">
-                <input
-                  type="checkbox"
-                  className="sr-only peer"
-                  checked={isMobile}
-                  onChange={() => setIsMobile(!isMobile)}
-                />
-                <div className="w-14 h-7 bg-gray-300 rounded-full peer peer-checked:bg-blue-500 transition"></div>
-                <div className="absolute left-1 top-1 w-5 h-5 bg-white rounded-full transition peer-checked:translate-x-7"></div>
-              </label>
-
-              <span
-                className={`font-semibold transition ${
-                  isMobile ? "text-blue-500" : "text-gray-400"
-                }`}
-              >
-                Mobile
-              </span>
-            </div> */}
-
             <div className="mt-8 flex flex-col items-center">
               {/* Toggle Labels */}
-              <div className="relative flex bg-gray-100 rounded-full p-1">
+              <div className="relative border border-red-600 object-contain  flex bg-gray-100 rounded-full p-1">
                 {/* Sliding Background Indicator */}
                 <div
                   className={`absolute top-1 bottom-1 w-1/2 rounded-full bg-blue-500 transition-all duration-300 ease-in-out ${
@@ -138,7 +108,9 @@ function Projects() {
                 </div>
 
                 <div className="mt-4">
-                  <h2 className="font-bold text-xl py-2">{project.title}</h2>
+                  <h2 className="font-bold text-xl text-white py-2">
+                    {project.title}
+                  </h2>
 
                   <p className="text-gray-400 font-medium">
                     {project.description}
@@ -149,8 +121,8 @@ function Projects() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <button className="bg-clip-text font-semibold text-transparent bg-gradient-to-r from-purple-400 to-pink-600 my-4 p-2 shadow-lg outline-none rounded">
-                      View Project
+                    <button className="bg-clip-text border-2 border-green-500  text-transparent bg-gradient-to-r from-purple-400 to-pink-600 font-bold my-4 p-2 shadow-lg outline-none rounded-tl-xl rounded-br-xl rounded-tr-md rounded-bl-md hover:bg-gradient-to-r hover:from-green-500 hover:to-blue-500 transition-all duration-300">
+                      VIEW PROJECT
                     </button>
                   </a>
                 </div>

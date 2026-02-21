@@ -55,13 +55,16 @@ function Home() {
                       of experience in demanding environments focused on
                       producing cutting-edge systems for the software
                       industry,passionate about building responsive client
-                      interface,and improving client interaction on the web.
+                      interface,and improving client interaction on web and
+                      mobile applications.
                     </p>
                   </div>
                   <div>
                     <Link to={"/pages/projects"}>
-                      <div className="bg-black hover:bg-gradient-to-r from-sky-500 to-indigo-500 ease-in-out duration-700  w-[250px] rounded-lg m-auto p-1.5 md:p-2 my-6">
-                        <p>Click Here To View Projects</p>
+                      <div className="bg-gradient-to-r from-sky-500 to-indigo-500 ease-in-out duration-700  w-[250px] rounded-lg m-auto p-1.5 md:p-2 my-6">
+                        <h1 className="text-white text-center">
+                          Click Here To View Projects
+                        </h1>
                       </div>
                     </Link>
                   </div>
