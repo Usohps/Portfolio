@@ -2,6 +2,40 @@ import { useState, useEffect } from "react";
 import { projects } from "../mockdata/projectData.js";
 import Loader from "../components/utils/loader";
 
+import { useRef } from "react";
+
+function LazyCard({ children }) {
+  const ref = useRef();
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.2 },
+    );
+
+    if (ref.current) observer.observe(ref.current);
+
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div
+      ref={ref}
+      className={`transition-all duration-700 ${
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+      }`}
+    >
+      {isVisible ? children : null}
+    </div>
+  );
+}
+
 function Projects() {
   const [isLoading, setIsLoading] = useState(true);
   // const [isMobile, setIsMobile] = useState(false);
@@ -95,38 +129,40 @@ function Projects() {
             className="flex md:flex-row items-center justify-center flex-col md:flex-wrap gap-6 mt-10 transition-all duration-500 animate-fadeIn"
           >
             {filteredProjects.map((project) => (
-              <div
-                key={project.id}
-                className="border-y-2 md:border-2 md:w-[350px] min-h-[550px] border-gray-500 shadow-2xl md:rounded p-4"
-              >
-                <div className="w-full">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full object-cover"
-                  />
+              <LazyCard key={project.id}>
+                <div
+                  key={project.id}
+                  className="border-y-2 md:border-2 md:w-[350px] min-h-[550px] border-gray-500 shadow-2xl md:rounded p-4"
+                >
+                  <div className="w-full">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full object-cover"
+                    />
+                  </div>
+
+                  <div className="mt-4">
+                    <h2 className="font-bold text-xl text-white py-2">
+                      {project.title}
+                    </h2>
+
+                    <p className="text-gray-400 font-medium">
+                      {project.description}
+                    </p>
+
+                    <a
+                      href={project.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <button className="bg-clip-text border-2 border-green-500  text-transparent bg-gradient-to-r from-purple-400 to-pink-600 font-bold my-4 p-2 shadow-lg outline-none rounded-tl-xl rounded-br-xl rounded-tr-md rounded-bl-md hover:bg-gradient-to-r hover:from-green-500 hover:to-blue-500 transition-all duration-300">
+                        VIEW PROJECT
+                      </button>
+                    </a>
+                  </div>
                 </div>
-
-                <div className="mt-4">
-                  <h2 className="font-bold text-xl text-white py-2">
-                    {project.title}
-                  </h2>
-
-                  <p className="text-gray-400 font-medium">
-                    {project.description}
-                  </p>
-
-                  <a
-                    href={project.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <button className="bg-clip-text border-2 border-green-500  text-transparent bg-gradient-to-r from-purple-400 to-pink-600 font-bold my-4 p-2 shadow-lg outline-none rounded-tl-xl rounded-br-xl rounded-tr-md rounded-bl-md hover:bg-gradient-to-r hover:from-green-500 hover:to-blue-500 transition-all duration-300">
-                      VIEW PROJECT
-                    </button>
-                  </a>
-                </div>
-              </div>
+              </LazyCard>
             ))}
           </div>
         </div>
