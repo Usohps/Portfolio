@@ -1,172 +1,70 @@
-import { useState, useEffect } from "react";
-import { projects } from "../mockdata/projectData.js";
-import Loader from "../components/utils/loader";
+import { useState } from "react";
+import PageIntro from "../components/PageIntro";
+import ProjectCard from "../components/ProjectCard";
+import { projects } from "../data/projects";
 
-import { useRef } from "react";
-
-function LazyCard({ children }) {
-  const ref = useRef();
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.2 },
-    );
-
-    if (ref.current) observer.observe(ref.current);
-
-    return () => observer.disconnect();
-  }, []);
-
-  return (
-    <div
-      ref={ref}
-      className={`transition-all duration-700 ${
-        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-      }`}
-    >
-      {isVisible ? children : null}
-    </div>
-  );
-}
+const filters = [
+  { id: "all", label: "All" },
+  { id: "web", label: "Web" },
+  { id: "mobile", label: "Mobile" },
+].map((f) => ({
+  ...f,
+  count: f.id === "all" ? projects.length : projects.filter((p) => p.type === f.id).length,
+}));
 
 function Projects() {
-  const [isLoading, setIsLoading] = useState(true);
-  // const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 500);
-    return () => clearTimeout(timer);
-  }, []);
-
-  const [activeType, setActiveType] = useState("web");
-
-  const webCount = projects.filter((p) => p.type === "web").length;
-  const mobileCount = projects.filter((p) => p.type === "mobile").length;
-
-  const filteredProjects = projects.filter(
-    (project) => project.type === activeType,
-  );
+  const [active, setActive] = useState("all");
+  const activeIndex = filters.findIndex((f) => f.id === active);
+  const visible = active === "all" ? projects : projects.filter((p) => p.type === active);
 
   return (
     <>
-      {isLoading ? (
-        <Loader />
-      ) : (
-        <div className="container m-auto">
-          {/* Header */}
-          <div className="py-12 pt-20 px-5 border-b-2 border-gray-50 my-12">
-            <h1 className="md:text-6xl text-5xl text-blue-500">Projects</h1>
+      <PageIntro eyebrow="Projects" title="Work that's" accent="live in production.">
+        A selection of web and mobile products I&apos;ve helped build — from fintech
+        platforms to health dashboards. Every card links to the live product.
+      </PageIntro>
 
-            <div className="mt-8 flex flex-col items-center">
-              {/* Toggle Labels */}
-              <div className="relative border border-red-600 object-contain  flex bg-gray-100 rounded-full p-1">
-                {/* Sliding Background Indicator */}
-                <div
-                  className={`absolute top-1 bottom-1 w-1/2 rounded-full bg-blue-500 transition-all duration-300 ease-in-out ${
-                    activeType === "mobile"
-                      ? "translate-x-full"
-                      : "translate-x-0"
-                  }`}
-                />
-
-                {/* WEB */}
-                <button
-                  onClick={() => setActiveType("web")}
-                  className={`relative z-10 px-6 py-2 rounded-full font-semibold transition-all duration-300 flex items-center gap-2 ${
-                    activeType === "web"
-                      ? "text-white scale-105"
-                      : "text-gray-500 hover:text-gray-700"
-                  }`}
-                >
-                  Web
-                  <span
-                    className={`text-xs px-2 py-0.5 rounded-full ${
-                      activeType === "web"
-                        ? "bg-white text-blue-500"
-                        : "bg-gray-200 text-gray-600"
-                    }`}
-                  >
-                    {webCount}
-                  </span>
-                </button>
-
-                {/* MOBILE */}
-                <button
-                  onClick={() => setActiveType("mobile")}
-                  className={`relative z-10 px-6 py-2 rounded-full font-semibold transition-all duration-300 flex items-center gap-2 ${
-                    activeType === "mobile"
-                      ? "text-white scale-105"
-                      : "text-gray-500 hover:text-gray-700"
-                  }`}
-                >
-                  Mobile
-                  <span
-                    className={`text-xs px-2 py-0.5 rounded-full ${
-                      activeType === "mobile"
-                        ? "bg-white text-blue-500"
-                        : "bg-gray-200 text-gray-600"
-                    }`}
-                  >
-                    {mobileCount}
-                  </span>
-                </button>
-              </div>
-            </div>
-          </div>
-
-          {/* Projects Grid */}
-          <div
-            key={activeType}
-            className="flex md:flex-row items-center justify-center flex-col md:flex-wrap gap-6 mt-10 transition-all duration-500 animate-fadeIn"
-          >
-            {filteredProjects.map((project) => (
-              <LazyCard key={project.id}>
-                <div
-                  key={project.id}
-                  className="border-y-2 md:border-2 md:w-[350px] min-h-[550px] border-gray-500 shadow-2xl md:rounded p-4"
-                >
-                  <div className="w-full">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="w-full object-cover"
-                    />
-                  </div>
-
-                  <div className="mt-4">
-                    <h2 className="font-bold text-xl text-white py-2">
-                      {project.title}
-                    </h2>
-
-                    <p className="text-gray-400 font-medium">
-                      {project.description}
-                    </p>
-
-                    <a
-                      href={project.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <button className="bg-clip-text border-2 border-green-500  text-transparent bg-gradient-to-r from-purple-400 to-pink-600 font-bold my-4 p-2 shadow-lg outline-none rounded-tl-xl rounded-br-xl rounded-tr-md rounded-bl-md hover:bg-gradient-to-r hover:from-green-500 hover:to-blue-500 transition-all duration-300">
-                        VIEW PROJECT
-                      </button>
-                    </a>
-                  </div>
-                </div>
-              </LazyCard>
-            ))}
-          </div>
+      <section className="shell mt-12">
+        {/* Segmented filter with a sliding indicator */}
+        <div
+          role="group"
+          aria-label="Filter projects by platform"
+          className="relative inline-grid animate-rise grid-cols-3 rounded-full border border-line bg-ink-900/70 p-1"
+          style={{ animationDelay: "240ms" }}
+        >
+          <span
+            aria-hidden="true"
+            className="absolute bottom-1 left-1 top-1 w-[calc((100%-0.5rem)/3)] rounded-full bg-cyan transition-transform duration-500 ease-out-expo"
+            style={{ transform: `translateX(${activeIndex * 100}%)` }}
+          />
+          {filters.map((f) => (
+            <button
+              key={f.id}
+              type="button"
+              aria-pressed={active === f.id}
+              onClick={() => setActive(f.id)}
+              className={`relative z-10 min-h-[44px] cursor-pointer rounded-full px-4 font-display text-sm font-medium transition-colors duration-300 sm:px-7 ${
+                active === f.id ? "text-ink-950" : "text-muted hover:text-fg"
+              }`}
+            >
+              {f.label}
+              <span className="ml-1.5 font-mono text-xs opacity-70">{f.count}</span>
+            </button>
+          ))}
         </div>
-      )}
+
+        <ul key={active} className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {visible.map((project, i) => (
+            <li
+              key={project.id}
+              className="animate-rise"
+              style={{ animationDelay: `${Math.min(i, 8) * 60}ms` }}
+            >
+              <ProjectCard project={project} index={i} detailed eager={i < 3} />
+            </li>
+          ))}
+        </ul>
+      </section>
     </>
   );
 }

@@ -1,65 +1,234 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Asap+Condensed:ital@1&family=BenchNine:wght@300&family=Merienda:wght@700&family=News+Cycle&family=Nunito:ital,wght@0,200;0,500;0,600;0,700;0,800;0,900;1,200;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); */
-
-@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Space+Grotesk:wght@300..700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-h1{
-  color: #ffff;
-  font-family:"Space Grotesk", sans-serif;
-}
-p{
-  color: rgba(243, 230, 230, 0.966);
-   font-family: "Karla", sans-serif;
-  line-height: 24px;
-}
-a h1{
-  color: black;
-}
-.loader {
-  width: 60px;
-  aspect-ratio: 1;
-  display: grid;
-  animation: l14 4s infinite;
-}
-.loader::before,
-.loader::after {    
-  content: "";
-  grid-area: 1/1;
-  border: 8px solid;
-  border-radius: 50%;
-  border-color: red red #0000 #0000;
-  mix-blend-mode: darken;
-  animation: l14 1s infinite linear;
-}
-.loader::after {
-  border-color: #0000 #0000 blue blue;
-  animation-direction: reverse;
-}
-@keyframes l14{ 
-  100%{transform: rotate(1turn)}
-}
+@layer base {
+  html {
+    color-scheme: dark;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6.5rem;
+    -webkit-text-size-adjust: 100%;
+  }
 
+  body {
+    @apply bg-ink-950 font-sans text-base leading-relaxed text-muted antialiased;
+    min-height: 100dvh;
+    overflow-x: hidden;
+    text-rendering: optimizeLegibility;
+  }
 
-
-@layer utilities {
-  .text-balance {
+  h1,
+  h2,
+  h3 {
+    @apply font-display text-fg;
     text-wrap: balance;
   }
-  .animate-fadeIn {
-    animation: fadeIn 0.4s ease forwards;
+
+  p {
+    text-wrap: pretty;
   }
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(10px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
+
+  ::selection {
+    background: rgb(34 211 238 / 0.3);
+    color: #fff;
+  }
+
+  :focus-visible {
+    outline: 2px solid #22d3ee;
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+
+  a,
+  button {
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+@layer components {
+  .shell {
+    @apply mx-auto w-full max-w-6xl px-5 sm:px-8;
+  }
+
+  .eyebrow {
+    @apply font-mono text-xs uppercase tracking-[0.22em] text-cyan;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-cyan via-cyan-soft to-violet-soft bg-clip-text text-transparent;
+  }
+
+  /* Buttons */
+  .btn {
+    @apply inline-flex min-h-[48px] cursor-pointer items-center whitespace-nowrap justify-center gap-2 rounded-full px-6 font-display text-[0.95rem] font-medium transition duration-300 ease-out-expo active:scale-[0.97];
+  }
+  .btn-primary {
+    @apply bg-cyan text-ink-950 hover:bg-cyan-soft;
+    box-shadow:
+      0 0 0 1px rgb(34 211 238 / 0.4),
+      0 10px 40px -10px rgb(34 211 238 / 0.55);
+  }
+  .btn-primary:hover {
+    box-shadow:
+      0 0 0 1px rgb(103 232 249 / 0.6),
+      0 14px 50px -8px rgb(34 211 238 / 0.75);
+    transform: translateY(-2px);
+  }
+  .btn-ghost {
+    @apply border border-line bg-white/[0.03] text-fg hover:border-cyan/60 hover:bg-cyan/[0.07] hover:text-cyan-soft;
+  }
+
+  .icon-btn {
+    @apply inline-flex h-12 w-12 cursor-pointer items-center justify-center rounded-full border border-line bg-white/[0.03] text-muted transition duration-300 ease-out-expo hover:-translate-y-0.5 hover:border-cyan/60 hover:text-cyan;
+  }
+
+  /* Surfaces */
+  .card {
+    @apply relative overflow-hidden rounded-2xl border border-line;
+    background: linear-gradient(160deg, rgb(16 22 42 / 0.85), rgb(10 14 26 / 0.85));
+    transition:
+      border-color 0.4s ease,
+      transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+      box-shadow 0.5s ease;
+  }
+  /* Cursor-following glow; --mx/--my are set from pointermove */
+  .card-glow::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    background: radial-gradient(
+      420px circle at var(--mx, 50%) var(--my, 0%),
+      rgb(34 211 238 / 0.13),
+      transparent 60%
+    );
+  }
+  .card-glow:hover::before {
+    opacity: 1;
+  }
+  .card-glow:hover {
+    border-color: rgb(34 211 238 / 0.35);
+    box-shadow: 0 24px 60px -30px rgb(34 211 238 / 0.35);
+  }
+
+  .chip {
+    @apply inline-flex items-center rounded-full border border-line bg-white/[0.03] px-3 py-1 font-mono text-[0.7rem] uppercase tracking-wider text-muted;
+  }
+
+  /* Underline that draws in on hover */
+  .link-line {
+    background: linear-gradient(currentColor, currentColor) 0 100% / 0 1px no-repeat;
+    transition: background-size 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .link-line:hover,
+  .group:hover .link-line {
+    background-size: 100% 1px;
+  }
+
+  /* Ambient page background */
+  .bg-grid {
+    background-image:
+      linear-gradient(to right, rgb(148 163 184 / 0.1) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(148 163 184 / 0.1) 1px, transparent 1px);
+    background-size: 64px 64px;
+    -webkit-mask-image: radial-gradient(ellipse 90% 60% at 50% 0%, #000 30%, transparent 78%);
+    mask-image: radial-gradient(ellipse 90% 60% at 50% 0%, #000 30%, transparent 78%);
+  }
+  .orb {
+    position: absolute;
+    border-radius: 9999px;
+    will-change: transform;
+  }
+  .orb-cyan {
+    background: radial-gradient(closest-side, rgb(34 211 238 / 0.26), transparent);
+  }
+  .orb-violet {
+    background: radial-gradient(closest-side, rgb(139 92 246 / 0.3), transparent);
+  }
+
+  /* Rotating gradient border around the portrait */
+  .ring-spin {
+    position: absolute;
+    inset: -1.5px;
+    border-radius: inherit;
+    overflow: hidden;
+  }
+  .ring-spin::before {
+    content: "";
+    position: absolute;
+    inset: -50%;
+    background: conic-gradient(
+      from 0deg,
+      transparent 0 55%,
+      #22d3ee 72%,
+      #8b5cf6 88%,
+      transparent 100%
+    );
+    animation: ring-rotate 9s linear infinite;
+  }
+
+  /* Reading-progress bar driven by scroll, no JS */
+  .scroll-progress {
+    display: none;
+  }
+  @supports (animation-timeline: scroll()) {
+    .scroll-progress {
+      display: block;
+      position: fixed;
+      inset: 0 0 auto 0;
+      z-index: 60;
+      height: 2px;
+      transform-origin: 0 50%;
+      background: linear-gradient(90deg, #22d3ee, #8b5cf6);
+      animation: progress linear both;
+      animation-timeline: scroll(root);
     }
   }
 }
 
+@keyframes ring-rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
 
+@keyframes progress {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+/* Scroll reveal: only hide content when motion is welcome */
+@media (prefers-reduced-motion: no-preference) {
+  .reveal {
+    opacity: 0;
+    transform: translate3d(0, 28px, 0);
+    transition:
+      opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1) var(--d, 0ms),
+      transform 0.8s cubic-bezier(0.16, 1, 0.3, 1) var(--d, 0ms);
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
