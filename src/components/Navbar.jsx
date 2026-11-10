@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import Icon from "./Icon";
 import { profile } from "../data/site";
+import { useTheme } from "../lib/useTheme";
 
 const links = [
   { to: "/", label: "Home", end: true },
@@ -11,12 +12,14 @@ const links = [
 
 const desktopLink = ({ isActive }) =>
   `relative rounded-full px-4 py-2 text-sm font-medium transition-colors duration-300 ${
-    isActive ? "bg-white/[0.07] text-fg" : "text-muted hover:text-fg"
+    isActive ? "bg-tint/[0.07] text-fg" : "text-muted hover:text-fg"
   }`;
 
 function Navbar() {
   const [open, setOpen] = useState(false);
   const { pathname, hash } = useLocation();
+  const { theme, toggle } = useTheme();
+  const nextTheme = theme === "dark" ? "light" : "dark";
 
   // Close the mobile menu whenever the route changes
   useEffect(() => setOpen(false), [pathname, hash]);
@@ -32,7 +35,7 @@ function Navbar() {
     <header className="fixed inset-x-0 top-0 z-50 px-3 pt-3 sm:px-5 sm:pt-4">
       <nav
         aria-label="Primary"
-        className="mx-auto max-w-6xl animate-fade rounded-2xl border border-line bg-ink-900/80 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.8)] backdrop-blur-xl"
+        className="mx-auto max-w-6xl animate-fade rounded-2xl border border-line bg-ink-900/80 shadow-[0_10px_40px_-15px_rgb(var(--shadow))] backdrop-blur-xl"
       >
         <div className="flex h-14 items-center justify-between pl-5 pr-2 sm:h-16 sm:pr-3">
           <Link
@@ -52,7 +55,21 @@ function Navbar() {
             ))}
           </div>
 
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1 sm:gap-2">
+            <button
+              type="button"
+              onClick={toggle}
+              aria-label={`Switch to ${nextTheme} mode`}
+              title={`Switch to ${nextTheme} mode`}
+              className="group inline-flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl text-muted transition-colors duration-300 hover:bg-tint/[0.07] hover:text-fg"
+            >
+              <span
+                key={theme}
+                className="inline-flex animate-swap transition-transform duration-500 ease-out-expo group-hover:rotate-[30deg]"
+              >
+                <Icon name={theme === "dark" ? "sun" : "moon"} size={20} />
+              </span>
+            </button>
             <Link
               to="/#contact"
               className="btn btn-primary hidden !min-h-[40px] !px-5 text-sm sm:inline-flex"
@@ -61,7 +78,7 @@ function Navbar() {
             </Link>
             <button
               type="button"
-              className="inline-flex h-11 w-11 items-center justify-center rounded-xl text-fg transition-colors hover:bg-white/[0.07] md:hidden"
+              className="inline-flex h-11 w-11 items-center justify-center rounded-xl text-fg transition-colors hover:bg-tint/[0.07] md:hidden"
               aria-expanded={open}
               aria-controls="mobile-menu"
               aria-label={open ? "Close menu" : "Open menu"}
@@ -94,7 +111,7 @@ function Navbar() {
                     end={l.end}
                     className={({ isActive }) =>
                       `flex min-h-[48px] items-center justify-between rounded-xl px-4 font-display text-lg ${
-                        isActive ? "bg-white/[0.06] text-cyan" : "text-fg"
+                        isActive ? "bg-tint/[0.06] text-cyan" : "text-fg"
                       }`
                     }
                   >

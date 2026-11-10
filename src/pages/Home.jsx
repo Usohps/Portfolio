@@ -40,7 +40,7 @@ function Hero() {
     <section className="shell grid min-h-[100dvh] items-center gap-14 pb-16 pt-32 lg:grid-cols-[1.2fr_0.8fr] lg:gap-10 lg:pt-28">
       <div>
         <p
-          className="inline-flex animate-rise items-center gap-2.5 rounded-full border border-line bg-white/[0.03] py-1.5 pl-3 pr-4 font-mono text-xs text-fg"
+          className="inline-flex animate-rise items-center gap-2.5 rounded-full border border-line bg-tint/[0.03] py-1.5 pl-3 pr-4 font-mono text-xs text-fg"
         >
           <span className="relative flex h-2 w-2">
             <span className="absolute inset-0 animate-pulse-dot rounded-full bg-emerald-400" />
@@ -122,7 +122,7 @@ function Hero() {
       >
         <div className="relative aspect-[4/5] rounded-[2rem]">
           <div className="ring-spin" aria-hidden="true" />
-          <div className="absolute inset-0 overflow-hidden rounded-[2rem] bg-ink-800">
+          <div className="absolute inset-0 overflow-hidden rounded-[2rem] bg-night">
             <img
               src={portraitSm}
               srcSet={`${portraitSm} 480w, ${portraitLg} 800w`}
@@ -134,17 +134,17 @@ function Hero() {
               decoding="async"
               className="h-full w-full object-cover object-top"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-ink-950 via-ink-950/10 to-transparent" />
-            <div className="absolute inset-x-5 bottom-5 flex items-end justify-between font-mono text-[0.68rem] uppercase tracking-[0.18em] text-fg">
+            <div className="absolute inset-0 bg-gradient-to-t from-night via-night/10 to-transparent" />
+            <div className="absolute inset-x-5 bottom-5 flex items-end justify-between font-mono text-[0.68rem] uppercase tracking-[0.18em] text-snow">
               <span>
                 {profile.firstName}.{profile.lastName}
               </span>
-              <span className="text-cyan">{profile.brand}~</span>
+              <span className="text-[#22d3ee]">{profile.brand}~</span>
             </div>
           </div>
         </div>
 
-        <div className="absolute -left-4 top-10 animate-float rounded-2xl border border-line bg-ink-900/85 px-4 py-3 shadow-2xl backdrop-blur sm:-left-10">
+        <div className="absolute -left-4 top-10 animate-float rounded-2xl border border-line bg-ink-900/90 px-4 py-3 shadow-2xl backdrop-blur sm:-left-10">
           <p className="font-display text-2xl font-semibold leading-none text-fg">
             {stats[0].value}
           </p>
@@ -153,7 +153,7 @@ function Hero() {
           </p>
         </div>
         <div
-          className="absolute -right-3 bottom-24 animate-float rounded-2xl border border-line bg-ink-900/85 px-4 py-3 shadow-2xl backdrop-blur sm:-right-8"
+          className="absolute -right-3 bottom-24 animate-float rounded-2xl border border-line bg-ink-900/90 px-4 py-3 shadow-2xl backdrop-blur sm:-right-8"
           style={{ animationDelay: "-3.5s" }}
         >
           <p className="font-mono text-[0.65rem] uppercase tracking-widest text-muted">
@@ -185,7 +185,7 @@ function Marquee() {
 
   return (
     <div
-      className="overflow-hidden border-y border-line bg-white/[0.015] py-6"
+      className="overflow-hidden border-y border-line bg-tint/[0.015] py-6"
       style={{
         WebkitMaskImage: "linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent)",
         maskImage: "linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent)",
@@ -268,7 +268,7 @@ function About() {
                   {s.items.map((item) => (
                     <li
                       key={item}
-                      className="rounded-full border border-line bg-white/[0.03] px-3.5 py-1.5 text-sm text-fg transition-colors duration-300 hover:border-cyan/50 hover:text-cyan-soft"
+                      className="rounded-full border border-line bg-tint/[0.03] px-3.5 py-1.5 text-sm text-fg transition-colors duration-300 hover:border-cyan/50 hover:text-cyan-soft"
                     >
                       {item}
                     </li>
@@ -330,7 +330,7 @@ function Contact() {
           className="absolute inset-0"
           style={{
             background:
-              "radial-gradient(60% 80% at 50% 0%, rgb(34 211 238 / 0.16), transparent 70%), radial-gradient(50% 70% at 80% 100%, rgb(139 92 246 / 0.18), transparent 70%)",
+              "radial-gradient(60% 80% at 50% 0%, rgb(var(--accent) / 0.16), transparent 70%), radial-gradient(50% 70% at 80% 100%, rgb(var(--violet) / 0.18), transparent 70%)",
           }}
         />
         <div className="relative">

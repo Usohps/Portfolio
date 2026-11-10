@@ -52,7 +52,7 @@ function ProjectCard({ project, index, wide = false, detailed = false, eager = f
           }`}
         >
           <span className="link-line">{title}</span>
-          <span className="mt-0.5 inline-flex h-9 w-9 flex-none items-center justify-center rounded-full border border-line text-muted transition duration-500 ease-out-expo group-hover:rotate-45 group-hover:border-cyan group-hover:bg-cyan group-hover:text-ink-950">
+          <span className="mt-0.5 inline-flex h-9 w-9 flex-none items-center justify-center rounded-full border border-line text-muted transition duration-500 ease-out-expo group-hover:rotate-45 group-hover:border-cyan group-hover:bg-cyan group-hover:text-on-accent">
             <Icon name="arrowUpRight" size={16} />
           </span>
         </h3>

@@ -3,8 +3,54 @@
 @tailwind utilities;
 
 @layer base {
-  html {
+  /* Theme tokens: space-separated RGB so Tailwind can apply opacity */
+  :root {
     color-scheme: dark;
+    --bg: 5 7 13;
+    --surface: 10 14 26;
+    --surface-2: 16 22 42;
+    --surface-3: 26 34 64;
+    --fg: 232 237 247;
+    --muted: 154 167 189;
+    --accent: 34 211 238;
+    --accent-soft: 103 232 249;
+    --violet: 139 92 246;
+    --violet-soft: 167 139 250;
+    --on-accent: 5 7 13;
+    --tint: 255 255 255;
+    --line: 148 163 184;
+    --line-alpha: 0.14;
+    --grid-alpha: 0.1;
+    --orb-alpha: 0.28;
+    --glow-alpha: 0.13;
+    --shadow: 0 0 0 / 0.8;
+    --card-shadow: none;
+  }
+
+  :root[data-theme="light"] {
+    color-scheme: light;
+    --bg: 245 247 252;
+    --surface: 255 255 255;
+    --surface-2: 240 244 250;
+    --surface-3: 226 232 242;
+    --fg: 11 18 32;
+    --muted: 71 85 105;
+    --accent: 14 116 144;
+    --accent-soft: 21 94 117;
+    --violet: 124 58 237;
+    --violet-soft: 109 40 217;
+    --on-accent: 255 255 255;
+    --tint: 15 23 42;
+    --line: 15 23 42;
+    --line-alpha: 0.12;
+    --grid-alpha: 0.07;
+    --orb-alpha: 0.16;
+    --glow-alpha: 0.1;
+    --shadow: 15 23 42 / 0.22;
+    --card-shadow: 0 1px 2px rgb(15 23 42 / 0.04), 0 12px 32px -18px rgb(15 23 42 / 0.18);
+  }
+
+  html {
     scroll-behavior: smooth;
     scroll-padding-top: 6.5rem;
     -webkit-text-size-adjust: 100%;
@@ -29,12 +75,12 @@
   }
 
   ::selection {
-    background: rgb(34 211 238 / 0.3);
-    color: #fff;
+    background: rgb(var(--accent) / 0.3);
+    color: rgb(var(--fg));
   }
 
   :focus-visible {
-    outline: 2px solid #22d3ee;
+    outline: 2px solid rgb(var(--accent));
     outline-offset: 3px;
     border-radius: 6px;
   }
@@ -66,13 +112,13 @@
   .btn-primary {
     @apply bg-cyan text-ink-950 hover:bg-cyan-soft;
     box-shadow:
-      0 0 0 1px rgb(34 211 238 / 0.4),
-      0 10px 40px -10px rgb(34 211 238 / 0.55);
+      0 0 0 1px rgb(var(--accent) / 0.4),
+      0 10px 40px -10px rgb(var(--accent) / 0.55);
   }
   .btn-primary:hover {
     box-shadow:
-      0 0 0 1px rgb(103 232 249 / 0.6),
-      0 14px 50px -8px rgb(34 211 238 / 0.75);
+      0 0 0 1px rgb(var(--accent-soft) / 0.6),
+      0 14px 50px -8px rgb(var(--accent) / 0.75);
     transform: translateY(-2px);
   }
   .btn-ghost {
@@ -86,7 +132,8 @@
   /* Surfaces */
   .card {
     @apply relative overflow-hidden rounded-2xl border border-line;
-    background: linear-gradient(160deg, rgb(16 22 42 / 0.85), rgb(10 14 26 / 0.85));
+    background: linear-gradient(160deg, rgb(var(--surface-2) / 0.85), rgb(var(--surface) / 0.85));
+    box-shadow: var(--card-shadow);
     transition:
       border-color 0.4s ease,
       transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
@@ -103,7 +150,7 @@
     transition: opacity 0.4s ease;
     background: radial-gradient(
       420px circle at var(--mx, 50%) var(--my, 0%),
-      rgb(34 211 238 / 0.13),
+      rgb(var(--accent) / var(--glow-alpha)),
       transparent 60%
     );
   }
@@ -111,8 +158,8 @@
     opacity: 1;
   }
   .card-glow:hover {
-    border-color: rgb(34 211 238 / 0.35);
-    box-shadow: 0 24px 60px -30px rgb(34 211 238 / 0.35);
+    border-color: rgb(var(--accent) / 0.35);
+    box-shadow: 0 24px 60px -30px rgb(var(--accent) / 0.35);
   }
 
   .chip {
@@ -132,8 +179,8 @@
   /* Ambient page background */
   .bg-grid {
     background-image:
-      linear-gradient(to right, rgb(148 163 184 / 0.1) 1px, transparent 1px),
-      linear-gradient(to bottom, rgb(148 163 184 / 0.1) 1px, transparent 1px);
+      linear-gradient(to right, rgb(var(--line) / var(--grid-alpha)) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(var(--line) / var(--grid-alpha)) 1px, transparent 1px);
     background-size: 64px 64px;
     -webkit-mask-image: radial-gradient(ellipse 90% 60% at 50% 0%, #000 30%, transparent 78%);
     mask-image: radial-gradient(ellipse 90% 60% at 50% 0%, #000 30%, transparent 78%);
@@ -144,10 +191,10 @@
     will-change: transform;
   }
   .orb-cyan {
-    background: radial-gradient(closest-side, rgb(34 211 238 / 0.26), transparent);
+    background: radial-gradient(closest-side, rgb(var(--accent) / var(--orb-alpha)), transparent);
   }
   .orb-violet {
-    background: radial-gradient(closest-side, rgb(139 92 246 / 0.3), transparent);
+    background: radial-gradient(closest-side, rgb(var(--violet) / var(--orb-alpha)), transparent);
   }
 
   /* Rotating gradient border around the portrait */
@@ -164,8 +211,8 @@
     background: conic-gradient(
       from 0deg,
       transparent 0 55%,
-      #22d3ee 72%,
-      #8b5cf6 88%,
+      rgb(var(--accent)) 72%,
+      rgb(var(--violet)) 88%,
       transparent 100%
     );
     animation: ring-rotate 9s linear infinite;
@@ -183,11 +230,18 @@
       z-index: 60;
       height: 2px;
       transform-origin: 0 50%;
-      background: linear-gradient(90deg, #22d3ee, #8b5cf6);
+      background: linear-gradient(90deg, rgb(var(--accent)), rgb(var(--violet)));
       animation: progress linear both;
       animation-timeline: scroll(root);
     }
   }
+}
+
+/* Cross-fade the whole page when the theme flips */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.45s;
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 @keyframes ring-rotate {

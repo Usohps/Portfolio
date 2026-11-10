@@ -3,24 +3,31 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      // Every colour reads a CSS variable so light/dark is a single switch
+      // (values live in src/index.css).
       colors: {
         ink: {
-          950: "#05070d",
-          900: "#0a0e1a",
-          800: "#10162a",
-          700: "#1a2240",
+          950: "rgb(var(--bg) / <alpha-value>)",
+          900: "rgb(var(--surface) / <alpha-value>)",
+          800: "rgb(var(--surface-2) / <alpha-value>)",
+          700: "rgb(var(--surface-3) / <alpha-value>)",
         },
-        fg: "#e8edf7",
-        muted: "#9aa7bd",
+        fg: "rgb(var(--fg) / <alpha-value>)",
+        muted: "rgb(var(--muted) / <alpha-value>)",
         cyan: {
-          DEFAULT: "#22d3ee",
-          soft: "#67e8f9",
+          DEFAULT: "rgb(var(--accent) / <alpha-value>)",
+          soft: "rgb(var(--accent-soft) / <alpha-value>)",
         },
         violet: {
-          DEFAULT: "#8b5cf6",
-          soft: "#a78bfa",
+          DEFAULT: "rgb(var(--violet) / <alpha-value>)",
+          soft: "rgb(var(--violet-soft) / <alpha-value>)",
         },
-        line: "rgb(148 163 184 / 0.14)",
+        "on-accent": "rgb(var(--on-accent) / <alpha-value>)",
+        tint: "rgb(var(--tint) / <alpha-value>)",
+        line: "rgb(var(--line) / var(--line-alpha))",
+        // Fixed colours for content that sits on the (always dark) portrait
+        night: "#05070d",
+        snow: "#e8edf7",
       },
       fontFamily: {
         sans: ['"DM Sans Variable"', "system-ui", "-apple-system", "sans-serif"],

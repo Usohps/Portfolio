@@ -23,7 +23,7 @@ function ArticleList({ articles }) {
                 {article.title}
               </span>
             </span>
-            <span className="inline-flex h-10 w-10 flex-none items-center justify-center rounded-full border border-line text-muted transition duration-500 ease-out-expo group-hover:rotate-45 group-hover:border-cyan group-hover:bg-cyan group-hover:text-ink-950">
+            <span className="inline-flex h-10 w-10 flex-none items-center justify-center rounded-full border border-line text-muted transition duration-500 ease-out-expo group-hover:rotate-45 group-hover:border-cyan group-hover:bg-cyan group-hover:text-on-accent">
               <Icon name="arrowUpRight" size={16} />
               <span className="sr-only">Read on Medium (opens in a new tab)</span>
             </span>

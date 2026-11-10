@@ -9,7 +9,7 @@
       content="Princewill Samuel is a software developer with 5+ years of experience building fast, responsive web and mobile interfaces with React, Vue and Tailwind CSS."
     />
     <meta name="theme-color" content="#05070d" />
-    <meta name="color-scheme" content="dark" />
+    <meta name="color-scheme" content="dark light" />
     <link rel="canonical" href="https://www.princewillusoh.com/" />
     <link rel="icon" type="image/svg+xml" href="/cozydev_browser_logo.svg" />
 
@@ -22,10 +22,29 @@
     />
     <meta name="twitter:card" content="summary" />
 
-    <!-- Paint the dark base before CSS/JS arrive so there is no white flash -->
+    <!-- Pick the theme and paint its base colour before CSS/JS arrive, so
+         there is never a flash of the wrong theme -->
+    <script>
+      (function () {
+        var theme;
+        try {
+          theme = localStorage.getItem("theme");
+        } catch (e) {}
+        if (theme !== "light" && theme !== "dark") {
+          theme = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+        }
+        document.documentElement.dataset.theme = theme;
+        if (theme === "light") {
+          document.querySelector('meta[name="theme-color"]').setAttribute("content", "#f5f7fc");
+        }
+      })();
+    </script>
     <style>
       html {
         background: #05070d;
+      }
+      html[data-theme="light"] {
+        background: #f5f7fc;
       }
     </style>
   </head>

@@ -44,7 +44,7 @@ function Projects() {
               aria-pressed={active === f.id}
               onClick={() => setActive(f.id)}
               className={`relative z-10 min-h-[44px] cursor-pointer rounded-full px-4 font-display text-sm font-medium transition-colors duration-300 sm:px-7 ${
-                active === f.id ? "text-ink-950" : "text-muted hover:text-fg"
+                active === f.id ? "text-on-accent" : "text-muted hover:text-fg"
               }`}
             >
               {f.label}
